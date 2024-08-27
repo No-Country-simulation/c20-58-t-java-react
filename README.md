@@ -12,26 +12,27 @@
 - **Framework de backend:** Java, Spring.
 - **Base deDatos:** MySQL, MySQLworkbench.
 - **Herramientas de desarrollo:** Visual Studio Code, Git, Github, npm, Figma, IntelliJ Idea.
-- **Otras herramientas:** Trello y Jira.
-- **Herramientas QA:** Postman y/o Jira.**
+- **Otras herramientas:** Jira.
+- **Herramientas QA:** Postman y/o Jira.
   
 ### Objetivo: 
 Proporcionar una aplicación para el seguimiento del rendimiento académico de estudiantes de nivel primario y secundario, además de facilitar el acceso al historial académico, la comunicación entre estudiantes, padres y profesores, y la generación de informes de rendimiento.
 
 ### Roles del Equipo
 - **Diseñador de Experiencia de Usuario (UX):** Katherine Hernandéz (Kathe).-
-- **Desarrolladores Frontend:** Anyelith, Luciana Quilcate(Luma), Jose Medina, Hugo Estiben.
-- **Desarrolladores Backend:** Miguel Martin, Gini Blanco, Matías Campopiano, Kevin Calle.
+- **Desarrolladores Frontend:** Anyelith Jacobo, Luciana Quilcate(Luma), Jose Medina, Hugo Estiben.
+- **Desarrolladores Backend:** Miguel Martin, Gini Blanco, Matías Campopiano, Dario Nicolas Ramos.
 - **Project Manager:** Matías Campopiano.
 - **QA:** Belisa Bolívar y Nicolas Rios.
 - **Team Leader:** Juan Grimaldos.
  
 
 ## Funcionalidades de la Aplicación:
-	- Sistema que permite a los usuarios realizar  un seguimiento  del rendimiento académico de estudiantes de nivel primario y secundario.
-	- Los usuarios tendrán acceso al historial académico y a las evaluaciones.
-	- Permite una comunicación directa entre estudiantes, padres y profesores.
-	- Cada Profesor podrá emitir informes de rendimiento del estudiante tanto para los padres/tutores como así también para el estudiante.
+- Sistema que permite a los usuarios realizar  un seguimiento  del rendimiento académico de estudiantes de nivel primario y secundario. 
+- Los usuarios tendrán acceso al historial académico y a las evaluaciones.
+- Permite una comunicación directa entre estudiantes, padres y profesores.
+- Cada Profesor podrá emitir informes de rendimiento del estudiante tanto para los padres/tutores como así también para el estudiante.
+
 	
 ### Tipos de Usuarios
 - Estudiantes
