@@ -12,7 +12,7 @@
 - **Framework de backend:** Java, Spring.
 - **Base deDatos:** MySQL, MySQLworkbench.
 - **Herramientas de desarrollo:** Visual Studio Code, Git, Github, npm, Figma, IntelliJ Idea.
-- **Otras herramientas:** Jira.
+- **Otras herramientas:** Trello.
 - **Herramientas QA:** Postman y/o Jira.
   
 ### Objetivo: 
