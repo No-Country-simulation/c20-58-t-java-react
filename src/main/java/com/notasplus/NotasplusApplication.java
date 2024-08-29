@@ -1,5 +1,6 @@
 package com.notasplus;
 
+import com.notasplus.model.entity.Role;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
