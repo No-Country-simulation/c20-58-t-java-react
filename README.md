@@ -2,8 +2,6 @@
 
 ## Proyecto: NOTAPLUS
 
-### Link Repositorio: 
-**https://github.com/No-Country-simulation/c20-58-t-java-react.git**
 
 ### Categoría de MVP: 
 **EdTech - Plataforma de Evaluación y Seguimiento del Rendimiento Escolar**
