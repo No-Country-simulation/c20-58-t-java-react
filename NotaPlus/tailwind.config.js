@@ -8,10 +8,22 @@ export default {
     extend: {
       colors: {
         'Black': '#1E2832',
-        'primayBG': '#1e28320d'
+        'white':'#ffffff',
+        'grey_user':'#6c7078',
+        'primaryBG': '#1e28320d',
+        'yellowGreen_Button': '#85C226',
+        'tea_borderButton':'#008285',
+        'palatinateBlue_Button':'#2c45f8',
+        'silver_borderInput':'#a9a9a9',
+        'argentinianBlue_logo':'#61b1fd',
+        'mexicanPink_logo':'#e11282',
+        'internationalKleinBlue_menu':'#2227a5',
+        'pennBlue_bg':'#0d0f3f'
+
       },
       fontFamily: {
-        'primary': ['Roboto', 'sans-serif']
+        'primary': ['Roboto', 'sans-serif'],
+        'secondary':('Inter','sans-serif')
       }
     },
   },

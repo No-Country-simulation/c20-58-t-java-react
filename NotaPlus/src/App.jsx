@@ -1,14 +1,14 @@
-import "./App.css";
-import Navbar from "./components/NavBar";
+// import "./App.css";
+import { Header } from "./components/Header";
 import AppRouter from "./routers/AppRouter";
 
 
 function App() {
   return <>
-    <div>
-      <Navbar/>
+    <main className="bg-pennBlue_bg p-4">
+      <Header />
       <AppRouter/>
-    </div>
+    </main>
   </>;
 }
 
