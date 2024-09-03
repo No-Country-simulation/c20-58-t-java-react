@@ -3,14 +3,15 @@
 ## Proyecto: NOTAPLUS
 
 
+
 ### Categoría de MVP: 
 **EdTech - Plataforma de Evaluación y Seguimiento del Rendimiento Escolar**
 ### Stack -Tecnologías y plataformas que se van a utilizar
 - **Framework de frontend:** HTML, CSS, JavaScript, React.js Redux.
-- **Framework de backend:** Java, Spring.
+- **Framework de backend:** Java, Spring, documentación API, Swagger, gestor de dependencias Maven.
 - **Base deDatos:** MySQL, MySQLworkbench.
 - **Herramientas de desarrollo:** Visual Studio Code, Git, Github, npm, Figma, IntelliJ Idea.
-- **Otras herramientas:** Jira.
+- **Otras herramientas:** Trello.
 - **Herramientas QA:** Postman y/o Jira.
   
 ### Objetivo: 
@@ -21,7 +22,7 @@ Proporcionar una aplicación para el seguimiento del rendimiento académico de e
 - **Desarrolladores Frontend:** Anyelith Jacobo, Luciana Quilcate(Luma), Jose Medina, Hugo Estiben.
 - **Desarrolladores Backend:** Miguel Martin, Gini Blanco, Matías Campopiano, Dario Nicolas Ramos.
 - **Project Manager:** Matías Campopiano.
-- **QA:** Belisa Bolívar y Nicolas Rios.
+- **QA:** Nicolas Rios.
 - **Team Leader:** Juan Grimaldos.
  
 
