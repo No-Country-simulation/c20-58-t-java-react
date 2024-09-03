@@ -5,7 +5,7 @@ const Home = () => {
     <section className="flex flex-col items-center h-screen gap-[60px]">
     <h2 className="font-bold text-white text-[30px] uppercase">Bienvenidos</h2>
     <img src={logo} alt="imagen de bienvenida" className="w-[213.59px] h-[144px]"/>
-    <button className="bg-palatinateBlue_Button w-[291px] h-[48px] rounded-lg py-[12px] px-[16px] text-white"><a href="#"><span>Iniciar Sesión</span></a></button>
+    <button className="bg-palatinateBlue_Button w-[291px] h-[48px] rounded-lg py-[12px] px-[16px] text-white ease-in-out duration-300 hover:bg-mexicanPink_logo hover:scale-90 "><a href="#"><span>Iniciar Sesión</span></a></button>
   </section>
   )
 }

@@ -10,7 +10,7 @@ export default {
         'Black': '#1E2832',
         'white':'#ffffff',
         'grey_user':'#6c7078',
-        'primaryBG': '#1e28320d',
+        'primaryBG': '#0f124b',
         'yellowGreen_Button': '#85C226',
         'tea_borderButton':'#008285',
         'palatinateBlue_Button':'#2c45f8',
@@ -24,8 +24,13 @@ export default {
       fontFamily: {
         'primary': ['Roboto', 'sans-serif'],
         'secondary':('Inter','sans-serif')
-      }
+      },
+      backgroundImage: {
+        'fondoOpcion1': "url('/src/asset/fondoOpcion1.png')",
+        'fondoOpcion2': "url('/src/asset/fondoOpcion2.png')"
+      },
     },
+
   },
   plugins: [],
 }

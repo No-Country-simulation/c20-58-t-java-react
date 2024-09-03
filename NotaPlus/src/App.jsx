@@ -5,7 +5,7 @@ import AppRouter from "./routers/AppRouter";
 
 function App() {
   return <>
-    <main className="bg-pennBlue_bg p-4">
+    <main className="bg-pennBlue_bg p-4 bg-fondoOpcion1">
       <Header />
       <AppRouter/>
     </main>
