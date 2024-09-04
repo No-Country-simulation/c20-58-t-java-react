@@ -23,8 +23,12 @@ export default {
       },
       fontFamily: {
         'primary': ['Roboto', 'sans-serif'],
-        'secondary':('Inter','sans-serif')
-      }
+        'secondary':('Inter','sans-serif'),
+        'tertiary': ['Raleway', 'sans-serif'],
+      },
+      backgroundImage: {
+        'custom': 'linear-gradient(90deg, #0D0F3F 0%, #2227A5 100%)',
+      },
     },
   },
   plugins: [],
