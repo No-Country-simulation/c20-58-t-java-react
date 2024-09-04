@@ -14,6 +14,7 @@ export default {
         'yellowGreen_Button': '#85C226',
         'tea_borderButton':'#008285',
         'palatinateBlue_Button':'#2c45f8',
+        'resolutionBlue_footer':'#292782',
         'silver_borderInput':'#a9a9a9',
         'argentinianBlue_logo':'#61b1fd',
         'mexicanPink_logo':'#e11282',
