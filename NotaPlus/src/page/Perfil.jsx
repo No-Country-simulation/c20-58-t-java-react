@@ -67,10 +67,6 @@ const Perfil = () => {
 
             
         </div>
-
-          
-
-
     </section>
     <FooterNavBar/>
     </>

@@ -1,7 +1,6 @@
-
-
-export const IconFooter = ({href,img,alt}) => {
-  return (
+export const IconFooter = (params) => {
+  const {href,img,alt} = params
+   return (
     <>
         <li>
             <a href={href}>

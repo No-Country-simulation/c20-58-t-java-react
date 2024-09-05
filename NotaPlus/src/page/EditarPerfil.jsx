@@ -12,7 +12,6 @@ const EditarPerfil = () => {
           <NombreUsuario
               nombre= "Nombre.Usuario"
           />
-
           {/* {Acá se debe hacer una petición get por Id} 
               permitir modificar password, email y agregar foto(lo cual genera una petición put)
           */}
@@ -46,7 +45,6 @@ const EditarPerfil = () => {
             </form>
           </div>
     </section>
-
     <FooterNavBar/>
     </>
   )

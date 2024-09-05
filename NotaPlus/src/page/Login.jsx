@@ -2,8 +2,8 @@ import Footer from "../components/Footer";
 import logo from "../asset/notaPlusLogo.svg";
 function Login() {
   return (
-    <div className="flex flex-col content-center min-h-[95vh] place-content-center">
-      <div className="flex flex-col md:max-xl:w-[95%] md:self-center  md:border-blue-400 md:border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
+    <section className="flex flex-col content-center min-h-[100vh] place-content-center">
+      <div className="flex flex-col lg:max-xl:w-[95%] md:self-center  md:border-blue-400 md:border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
         <img
           src={logo}
           alt="logoNotaPlus"
@@ -53,7 +53,7 @@ function Login() {
         </form>
       </div>
       <Footer />
-    </div>
+    </section>
   );
 }
 

@@ -1,12 +1,14 @@
-
-
-const NombreUsuario = ({saludo,nombre}) => {
+const NombreUsuario = (params) => {
+  const { saludo, nombre } = params;
   return (
     <div className="max-w-3xl w-full">
-      <h2 className="text-left text-white font-bold text-[20px] py-7">{saludo}{nombre}</h2>
+      <h2 className="text-left text-white font-bold text-[20px] py-7">
+        {saludo}
+        {nombre}
+      </h2>
       <hr className="py-4"></hr>
     </div>
-  )
-}
+  );
+};
 
-export default NombreUsuario
+export default NombreUsuario;
