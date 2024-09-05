@@ -6,6 +6,7 @@ import Parents from "../page/Parents";
 import Teacher from "../page/Teacher";
 import Mensajes from "../page/Mensajes";
 
+
 function AppRouter() {
     return <>
     <div>
@@ -16,6 +17,7 @@ function AppRouter() {
         <Route path='/parent' element={<Parents/>}/>
         <Route path='/teacher' element={<Teacher/>}/>
         <Route path='/messages' element={<Mensajes/>}/>
+
       </Routes>
     </div>
   </>;

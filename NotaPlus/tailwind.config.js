@@ -31,6 +31,7 @@ export default {
         'custom': 'linear-gradient(90deg, #0D0F3F 0%, #2227A5 100%)',
         'fondoOpcion1': "url('/src/asset/fondoOpcion1.png')",
         'fondoOpcion2': "url('/src/asset/fondoOpcion2.png')"
+
       },
     },
 
