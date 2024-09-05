@@ -1,4 +1,6 @@
+import { Header } from "../components/Header";
 import { Cards } from "../components/Cards"
+import NombreUsuario from "../components/NombreUsuario"
 import FooterNavBar from "../components/FooterNavBar"
 import icon1 from "../asset/icon_evaluaciones.png"
 import icon2 from "../asset/icon_materias.png"
@@ -9,9 +11,14 @@ import icon4 from "../asset/icon_estudiantes.png"
 const Teacher = () => {
   return (
     <>
-        <section className="flex flex-col place-content-center  items-center">
-            <div className="max-w-3xl w-full"><h2 className="text-left text-white  font-bold text-[20px] py-7  ">Hola Nombre.profesor</h2></div>
-            <div className="flex place-content-around max-w-3xl gap-[15px] flex-wrap overflow-y-auto p-4">
+        <Header/>
+        <section className="flex flex-col place-content-center items-center">
+
+            <NombreUsuario
+                saludo="Hola "
+                nombre="Nombre.Profe"/>
+
+            <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
                 <Cards
                     img={icon1}
                     title="Evaluaciones" 

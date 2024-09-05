@@ -9,7 +9,8 @@ const FooterNavBar = () => {
     <div className='bg-resolutionBlue_footer h-[54px] w-11/12 rounded-t-[50px]  align-middle absolute bottom-0' >
         <ul className="flex items-center justify-center gap-8 pt-3">
           <IconFooter
-          href="#"
+          // cómo personalizo enlace home según usuario
+           href="http://localhost:5173"
           img={iconfooter1} 
           alt="icono home"
           />
@@ -20,7 +21,7 @@ const FooterNavBar = () => {
           alt="icono mensajes"
           />
           <IconFooter
-          href="#"
+          href="http://localhost:5173/profile"
           img={iconfooter4}
           alt="icono perfil"
           />
