@@ -1,8 +1,10 @@
 function Footer() {
   return (
     <footer className="flex justify-center">
-      <a href="#" className="text-[#ffffff] mt-[2rem]">
-        Politicas de privacidad
+
+      <a href="#" className="text-white mt-[2rem]">
+        Políticas de privacidad
+
       </a>
     </footer>
   );
