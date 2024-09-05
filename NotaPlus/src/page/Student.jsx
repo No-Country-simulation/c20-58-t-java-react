@@ -1,5 +1,5 @@
 import { Cards } from "../components/Cards"
-import Footer from "../components/Footer"
+import FooterNavBar from "../components/FooterNavBar"
 import icon1 from "../asset/icon_evaluaciones.png"
 import icon2 from "../asset/icon_materias.png"
 import icon3 from "../asset/icon_actividades.png"
@@ -41,7 +41,7 @@ const Student = () => {
             
         </section>
 
-        <Footer/>  
+        <FooterNavBar/>  
 
     </>
   )

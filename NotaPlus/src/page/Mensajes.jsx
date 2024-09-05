@@ -1,4 +1,4 @@
-import Footer from "../components/Footer"
+import FooterNavBar from "../components/FooterNavBar"
 
 const Mensajes = () => {
   return (
@@ -52,7 +52,8 @@ const Mensajes = () => {
                 </tbody>
             </table>
         </section>
-    <Footer/>
+        
+    <FooterNavBar/>
 </>
 )
 }
