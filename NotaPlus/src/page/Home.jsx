@@ -3,6 +3,7 @@ import Footer from  "../components/Footer"
 
 const Home = () => {
   return (
+
   <>
     <section className="flex flex-col items-center gap-[60px]">
         <h2 className="font-bold text-white text-[30px] uppercase">Bienvenidos</h2>
@@ -11,6 +12,7 @@ const Home = () => {
     </section>
     <Footer/>
 </>
+
   )
 }
 
