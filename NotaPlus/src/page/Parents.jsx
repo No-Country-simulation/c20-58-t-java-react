@@ -13,7 +13,7 @@ const Parents = () => {
         <NombreUsuario
             saludo="Hola "
             nombre="Nombre.padres"/>
-        <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
+        <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
             <Cards
                 img={icon4}
                 title="Nombre Estudiante" 

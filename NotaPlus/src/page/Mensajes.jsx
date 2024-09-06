@@ -14,7 +14,7 @@ const Mensajes = () => {
             nombre= "Nombre.Usuario"
         />
 
-        <div className=" overflow-y-auto h-80 scroll-smooth pb-[100px]">    
+        <div className=" overflow-y-auto h-80 scroll-smooth scrollbar-hide pb-[100px]">    
             <form className="flex flex-col items-center">
             
             <Titulos

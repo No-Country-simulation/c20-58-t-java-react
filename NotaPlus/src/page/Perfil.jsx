@@ -14,7 +14,7 @@ const Perfil = () => {
           <NombreUsuario
               nombre= "Nombre.Usuario"
           />
-          <div  className="flex max-w-3xl w-full flex-wrap p-4 items-center  overflow-y-auto h-80 scroll-smooth gap-8">
+          <div  className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth gap-8">
               <div className="max-w-3xl w-full text-right"><a href="http://localhost:5173/editprofile"><span>Editar Perfil</span></a></div>
               <Titulos
                   title="Perfil"
