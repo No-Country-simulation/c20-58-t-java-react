@@ -3,7 +3,7 @@ const Label = (params) => {
   return (
     <label
       htmlFor={para}
-      className="w-full text-left text-white font-bold font-sans pt-9"
+      className="w-full text-left text-white font-bold font-sans pt-2"
     >
       {title}
     </label>

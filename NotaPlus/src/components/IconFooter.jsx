@@ -1,10 +1,10 @@
 export const IconFooter = (params) => {
-  const {href,img,alt} = params
+  const {href,mustDo, img,alt} = params
    return (
     <>
         <li>
-            <a href={href}>
-                <img className="h_[44px]" src={img} alt={alt} />
+            <a href={href} onClick={mustDo}>
+                <img className="h_[44px] pointer" src={img} alt={alt} />
             </a>
         </li>
     </>

@@ -17,7 +17,7 @@ const Perfil = () => {
           <div  className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth gap-8">
               <div className="max-w-3xl w-full text-right"><a href="http://localhost:5173/editprofile"><span>Editar Perfil</span></a></div>
               <Titulos
-                  title="Perfil"
+                  title="Perfil de Usuario"
               />    
               
               {/* {Acá se debe hacer una petición get por Id} 
@@ -26,7 +26,7 @@ const Perfil = () => {
 
                 <div className="max-w-3xl w-full ml-4 backdrop-blur-sm bg-white/30 rounded-xl p-8">
                       <Subtitulos
-                      title="Detalles de usuario"/>
+                      title="Detalles Personales"/>
                         <hr className="pt-4"></hr>  
                         <p>Domicilio:</p>
                         <p>DNI:</p>
