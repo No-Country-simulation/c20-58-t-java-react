@@ -8,11 +8,11 @@
 		<version>3.3.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.v1</groupId>
-	<artifactId>NotaPlus</artifactId>
+	<groupId>com.notaplus</groupId>
+	<artifactId>notaplus</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>notasplus</name>
+	<name>notaplus</name>
 	<description>EdTech - Plataforma de Evaluación y Seguimiento del Rendimiento Escolar</description>
 	<url/>
 	<licenses>
