@@ -1,9 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit' 
-import studentSlice from './studentSlice'
+import { configureStore } from "@reduxjs/toolkit";
+import tableReducer from "../action/studentSlice";
 
 export const store = configureStore({
   reducer: {
-    student: studentSlice
+    table: tableReducer,
   },
-  devTools : true
-})
+  devTools: true,
+});

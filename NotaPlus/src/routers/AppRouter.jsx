@@ -7,7 +7,8 @@ import Teacher from "../page/Teacher";
 import Mensajes from "../page/Mensajes";
 import Perfil from "../page/Perfil";
 import EditarPerfil from "../page/EditarPerfil";
-
+import Subject from "../page/Subject";
+import Activities from "../page/Activities";
 
 function AppRouter() {
     return <>
@@ -21,6 +22,8 @@ function AppRouter() {
         <Route path='/messages' element={<Mensajes/>}/>
         <Route path='/profile' element={<Perfil/>}/>
         <Route path='/editprofile' element={<EditarPerfil/>}/>
+        <Route path="/teacher/subject" element={<Subject/>} />
+        <Route path="/activities"element={<Activities/>}/>
       </Routes>
     </div>
   </>;

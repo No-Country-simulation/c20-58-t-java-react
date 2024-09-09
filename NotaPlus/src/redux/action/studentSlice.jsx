@@ -1,5 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from "@reduxjs/toolkit";
+import initialState from "../../initialState";
 
-export const studentSlice = createSlice({
-    
-})
+const tableSlice = createSlice({
+  name: "table",
+  initialState,
+  reducers: {},
+});
+export default tableSlice.reducer;
