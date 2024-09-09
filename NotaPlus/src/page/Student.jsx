@@ -1,6 +1,7 @@
 import { Header } from "../components/Header";
 import { Cards } from "../components/Cards"
 import NombreUsuario from "../components/NombreUsuario"
+import Titulos from "../components/Titulos";
 import FooterNavBar from "../components/FooterNavBar"
 import icon1 from "../asset/icon_evaluaciones.png"
 import icon2 from "../asset/icon_materias.png"
@@ -14,9 +15,13 @@ const Student = () => {
         <Header/>
         <section className="flex flex-col place-content-center  items-center">
             <NombreUsuario
-            saludo="Hola "
-            nombre="Nombre.Estudiante"/>
-            <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
+                saludo="Hola "
+                nombre="Nombre.Estudiante"/>
+
+            <Titulos 
+                title="Home" />  
+
+            <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
                 <Cards
                     img={icon1}
                     title="Evaluaciones" 

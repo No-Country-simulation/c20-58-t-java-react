@@ -7,6 +7,7 @@ import Teacher from "../page/Teacher";
 import Mensajes from "../page/Mensajes";
 import Perfil from "../page/Perfil";
 import EditarPerfil from "../page/EditarPerfil";
+import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
 
 
 function AppRouter() {
@@ -21,6 +22,7 @@ function AppRouter() {
         <Route path='/messages' element={<Mensajes/>}/>
         <Route path='/profile' element={<Perfil/>}/>
         <Route path='/editprofile' element={<EditarPerfil/>}/>
+        <Route path='/politica' element={<PoliticaPrivacidad/>}/>
       </Routes>
     </div>
   </>;
