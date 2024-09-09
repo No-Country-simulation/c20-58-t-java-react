@@ -29,7 +29,7 @@ function Activities() {
 
       {stateTable.map(({ id, nombre, nota1, nota2, nota3, nota4, estado }) => {
         return (
-          <div className="grid grid-flow-col-dense m-[4px]" key={id} >
+          <div className="grid grid-flow-col-dense m-[4px]" key={id}>
             <table className="text-center  text-white">
               <thead className="bg-white">
                 <tr>

@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom"
+
 export const IconFooter = (params) => {
-  const {href,img,alt} = params
+  const {link,mustDo, img,alt} = params
    return (
     <>
         <li>
-            <a href={href}>
-                <img className="h_[44px]" src={img} alt={alt} />
-            </a>
+            <Link to={link}>
+                <img className="h_[44px] pointer" src={img} alt={alt} onClick={mustDo}/>
+            </Link>
         </li>
     </>
   )

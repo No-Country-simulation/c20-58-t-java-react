@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom';
+
 function Footer() {
   return (
     <footer className="flex justify-center">
-      <a href="#" className="text-white mt-[2rem]">
-        Políticas de privacidad
-      </a>
+          <Link to="/politica" className="text-white underline">
+                <span className="text-white mt-[2rem]">Ir a Política de Privacidad</span>
+          </Link>
     </footer>
   );
 }

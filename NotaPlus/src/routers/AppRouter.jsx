@@ -9,24 +9,28 @@ import Perfil from "../page/Perfil";
 import EditarPerfil from "../page/EditarPerfil";
 import Subject from "../page/Subject";
 import Activities from "../page/Activities";
+import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
 
 function AppRouter() {
-    return <>
-    <div>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path="/login" element={<Login/>}/>
-        <Route path='/student' element={<Student/>}/>
-        <Route path='/parent' element={<Parents/>}/>
-        <Route path='/teacher' element={<Teacher/>}/>
-        <Route path='/messages' element={<Mensajes/>}/>
-        <Route path='/profile' element={<Perfil/>}/>
-        <Route path='/editprofile' element={<EditarPerfil/>}/>
-        <Route path="/teacher/subject" element={<Subject/>} />
-        <Route path="/activities"element={<Activities/>}/>
-      </Routes>
-    </div>
-  </>;
+  return (
+    <>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/student" element={<Student />} />
+          <Route path="/parent" element={<Parents />} />
+          <Route path="/teacher" element={<Teacher />} />
+          <Route path="/messages" element={<Mensajes />} />
+          <Route path="/profile" element={<Perfil />} />
+          <Route path="/editprofile" element={<EditarPerfil />} />
+          <Route path="/teacher/subject" element={<Subject />} />
+          <Route path="/activities" element={<Activities />} />
+          <Route path="/politica" element={<PoliticaPrivacidad />} />
+        </Routes>
+      </div>
+    </>
+  );
 }
 
 export default AppRouter;
