@@ -7,6 +7,7 @@ import icon1 from "../asset/icon_evaluaciones.png"
 import icon2 from "../asset/icon_materias.png"
 import icon3 from "../asset/icon_actividades.png"
 import icon4 from "../asset/icon_estudiantes.png"
+import iconUser from "../asset/userimage.png" 
 
 
 const Student = () => {
@@ -14,10 +15,7 @@ const Student = () => {
     <>
         <Header/>
         <section className="flex flex-col place-content-center  items-center">
-            <NombreUsuario
-                saludo="Hola "
-                nombre="Nombre.Estudiante"/>
-
+            <NombreUsuario img={iconUser} alt="Foto de Usuario" saludo="Hola " nombre="Nombre.Estudiante" role="Estudiante" />
             <Titulos 
                 title="Home" />  
 
