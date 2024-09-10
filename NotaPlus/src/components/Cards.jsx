@@ -1,5 +1,3 @@
-
-
 export const Cards = (params) => {
   const {img,title,href,alt} = params
   return (

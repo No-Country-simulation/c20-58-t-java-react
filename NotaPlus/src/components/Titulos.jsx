@@ -1,5 +1,3 @@
-
-
 const Titulos = (params) => {
   const {title} = params
   return (

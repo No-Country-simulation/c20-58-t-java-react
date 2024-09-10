@@ -47,13 +47,11 @@ const Parents = () => {
             />
 
         </div>
-        
-    </section>
+      </section>
 
-    <FooterNavBar/>  
+      <FooterNavBar />
+    </>
+  );
+};
 
-</>
-  )
-}
-
-export default Parents
+export default Parents;
