@@ -1,27 +1,23 @@
-import {useForm} from 'react-hook-form'
+import { useForm } from "react-hook-form";
 
 import Footer from "../components/Footer";
 import logo from "../asset/notaPlusLogo.svg";
 function Login() {
-
-  const {register, handleSubmit,
-      formState: {errors, },
-      watch,
-      reset
-  } =useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch,
+    reset,
+  } = useForm();
 
   console.log(errors);
 
-  const onSubmit= handleSubmit(
-      (data)=>{
-        console.log(data);
-          alert("Ingresando a tu Cuenta...")
-          reset()
-  }
-  );
-
-
-
+  const onSubmit = handleSubmit((data) => {
+    console.log(data);
+    alert("Ingresando a tu Cuenta...");
+    reset();
+  });
 
   return (
     <section className="flex flex-col content-center min-h-[100vh] place-content-center">
@@ -32,7 +28,6 @@ function Login() {
           className="flex self-center w-[50%] relative sm:bottom-[3rem] md:bottom-[0rem]"
         />
         <form onSubmit={onSubmit} className="flex flex-col">
-        
           <label htmlFor="user" className="text-white ">
             ID
           </label>
@@ -40,15 +35,18 @@ function Login() {
             type="text"
             className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
             autoFocus
-            {...register("user",{
-                  required:{
-                    value:true,
-                    message: "Este campo debe completarse"  
-
-                  },
-              })}
+            {...register("user", {
+              required: {
+                value: true,
+                message: "Este campo debe completarse",
+              },
+            })}
           />
-          {errors.user && <span className='block mb-4 font-bold text-xs text-red-600'>{errors.user.message}</span>}
+          {errors.user && (
+            <span className="block mb-4 font-bold text-xs text-red-600">
+              {errors.user.message}
+            </span>
+          )}
 
           <div className="flex flex-col">
             <label htmlFor="password" className="text-white mt-[1rem]">
@@ -57,14 +55,19 @@ function Login() {
             <input
               type="password"
               className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
-              {...register("password",{
-                  pattern:{
-                      value:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
-                      message:"La contraseña debe tener un mínimo de 8 caracteres, una letra minúscula, una mayúscula y un número"
-                  }  
+              {...register("password", {
+                pattern: {
+                  value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
+                  message:
+                    "La contraseña debe tener un mínimo de 8 caracteres, una letra minúscula, una mayúscula y un número",
+                },
               })}
             />
-            {errors.password && <span className='block mb-4 text-xs text-red-600'>{errors.password.message}</span> }
+            {errors.password && (
+              <span className="block mb-4 text-xs text-red-600">
+                {errors.password.message}
+              </span>
+            )}
 
             <span className="flex justify-end items-end">
               <i
