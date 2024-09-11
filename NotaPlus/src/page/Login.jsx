@@ -1,21 +1,51 @@
 import { useForm } from "react-hook-form";
-
+import { useNavigate } from "react-router-dom";
+import Button1 from "../components/Button1";
 import Footer from "../components/Footer";
 import logo from "../asset/notaPlusLogo.svg";
+import { useState } from "react";
 function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm();
 
-  console.log(errors);
+console.log(errors);
+  const [authError, setAuthError] = useState('');
+  const navigate =useNavigate();
+
+const users = [
+  {userId:'23789456', password:'Pa23789456',role:'parents'},
+  {userId:'34675123', password:'Es34675123',role:'student'},
+  {userId:'5341078', password:'Te5341078',role:'teacher'}
+]
+
+
+  
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-    alert("Ingresando a tu Cuenta...");
+    
+    const user= users.find(user =>user.userId === data.userId && user.password===data.password);
+    if(user){
+      switch(user.role){
+        case 'student':
+          navigate('/student');
+          break;
+        case 'teacher':
+          navigate('/teacher');
+          break;
+        case 'parents':
+          navigate('/parent')    
+          break;
+        default:
+          setAuthError('Rol no encontrado');
+      }
+    }else{
+      setAuthError('Usuario o contraseña incorrectos')
+    }
     reset();
   });
 
@@ -28,23 +58,23 @@ function Login() {
           className="flex self-center w-[50%] relative sm:bottom-[3rem] md:bottom-[0rem]"
         />
         <form onSubmit={onSubmit} className="flex flex-col">
-          <label htmlFor="user" className="text-white ">
+          <label htmlFor="userId" className="text-white ">
             ID
           </label>
           <input
             type="text"
             className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
             autoFocus
-            {...register("user", {
+            {...register("userId", {
               required: {
                 value: true,
                 message: "Este campo debe completarse",
               },
             })}
           />
-          {errors.user && (
-            <span className="block mb-4 font-bold text-xs text-red-600">
-              {errors.user.message}
+          {errors.userId && (
+            <span className="block mb-4 font-bold text-s text-red-600">
+              {errors.userId.message}
             </span>
           )}
 
@@ -56,6 +86,10 @@ function Login() {
               type="password"
               className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
               {...register("password", {
+                required:{
+                  value:true,
+                  message: "Debe escribir una contraseña"
+                },
                 pattern: {
                   value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/,
                   message:
@@ -64,7 +98,7 @@ function Login() {
               })}
             />
             {errors.password && (
-              <span className="block mb-4 text-xs text-red-600">
+              <span className="block mb-4 text-s text-red-600">
                 {errors.password.message}
               </span>
             )}
@@ -80,6 +114,7 @@ function Login() {
               </i>
             </span>
           </div>
+
           <p className="text-white mt-[1rem]">
             ¿Olvidaste tu{" "}
             <a href="#" className="text-blue-600 ">
@@ -87,12 +122,23 @@ function Login() {
             </a>{" "}
           </p>
 
-          <button
+
+          <Button1
+            typeBtn="submit"
+            text="Ingresar"/>
+
+          {/* <button
             className="flex w-[100%] justify-center p-[1.2rem] bg-[#2C45F8] 
           rounded-[.7rem] text-white text-[1.4rem] mt-[1.5rem]"
           >
             Ingresar
-          </button>
+          </button> */}
+
+          {authError &&  (
+              <span className="block mb-4 text-s text-red-600">
+                {authError}
+              </span>
+            )}
         </form>
       </div>
       <Footer />

@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 import NombreUsuario from "../components/NombreUsuario";
 import Titulos from "../components/Titulos";
 import Label from "../components/Label";
+import Button1 from "../components/Button1";
 import FooterNavBar from "../components/FooterNavBar";
 
 const EditarPerfil = () => {
@@ -89,12 +90,11 @@ const EditarPerfil = () => {
               </span>
             )}
 
-            <button
-              type="submit"
-              className="bg-palatinateBlue_Button w-[291px] h-[48px] rounded-lg py-[12px] px-[16px] my-8 text-white ease-in-out duration-300 hover:bg-mexicanPink_logo hover:scale-90 "
-            >
-              <span>Guardar</span>
-            </button>
+            <Button1
+              typeBtn="submit"
+              text="Guardar"
+            />
+            
 
             {/* <pre>
                     {JSON.stringify(watch(),null,2)}

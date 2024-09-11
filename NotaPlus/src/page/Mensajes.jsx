@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-
+import Button1 from "../components/Button1";
 import { Header } from "../components/Header";
 import NombreUsuario from "../components/NombreUsuario";
 import Titulos from "../components/Titulos";
@@ -36,12 +36,7 @@ const Mensajes = () => {
           >
             <Titulos title="ENVIAR MENSAJE O CONSULTA" />
 
-            <Label para="subject" title="Asunto" />
-            <input
-              className="w-full p-2"
-              type="text"
-              placeholder="Escriba Asunto"
-            />
+
 
             <Label para="subject" title="Asunto:" />
             <input
@@ -56,7 +51,7 @@ const Mensajes = () => {
               })}
             />
             {errors.subject && (
-              <span className="block mb-4 font-bold text-xs text-red-600">
+              <span className="block mb-4 font-bold text-s text-red-600">
                 {errors.subject.message}
               </span>
             )}
@@ -81,7 +76,7 @@ const Mensajes = () => {
               <option value="profe3">Profesor 3</option>
             </select>
             {errors.receiver && (
-              <span className="block mb-4 font-bold text-xs text-red-600">
+              <span className="block mb-4 font-bold text-s text-red-600">
                 {errors.receiver.message}
               </span>
             )}
@@ -109,19 +104,16 @@ const Mensajes = () => {
               })}
             ></textarea>
             {errors.message && (
-              <span className="block mb-4 font-bold text-xs text-red-600">
+              <span className="block mb-4 font-bold text-s text-red-600">
                 {errors.message.message}
               </span>
             )}
 
-            <button
-              type="submit"
-              className="bg-palatinateBlue_Button w-[291px] h-[48px] rounded-lg py-[12px] px-[16px] my-8 text-white ease-in-out duration-300 hover:bg-mexicanPink_logo hover:scale-90 "
-            >
-              <a href="#">
-                <span>Enviar</span>
-              </a>
-            </button>
+            <Button1
+              typeBtn="submit"
+              link="/messages"
+              text="Enviar"/>
+          
             {/* Este botón además debe realizar una petición post para crear el nuevo resgistro de mensaje */}
           </form>
 
@@ -148,11 +140,10 @@ const Mensajes = () => {
                 <option value="profe3">Profesor 3</option>
               </select>
 
-              <button className="bg-palatinateBlue_Button w-[291px] h-[48px] rounded-lg py-[12px] px-[16px] my-8 text-white ease-in-out duration-300 hover:bg-mexicanPink_logo hover:scale-90 ">
-                <a href="#">
-                  <span>Buscar</span>
-                </a>
-              </button>
+              <Button1
+                typeBtn="submit"
+                text="Buscar"/>
+
             </div>
 
             <table className="max-w-3xl w-full">
@@ -218,17 +209,7 @@ const Mensajes = () => {
               </tbody>
             </table>
           </div>
-          <table className="tabla">
-            <thead id="tabla-header">
-              <tr>
-                <th>FECHA</th>
-                <th>ASUNTO</th>
-                <th>DESTINATARIO</th>
-                <th>ACCIONES</th>
-              </tr>
-            </thead>
-            <tbody id="tabla-body"></tbody>
-          </table>
+
         </div>
       </section>
       <FooterNavBar />
