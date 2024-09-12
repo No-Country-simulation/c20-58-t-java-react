@@ -40,30 +40,32 @@ const SubjectEvaluations = () => {
                 title={subject.name}/>  
 
             <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
-            
-            <table className="min-w-full bg-white">
-                  <thead className="bg-pennBlue_bg text-white">
-                    <tr>
-                      <th className="px-4 py-2">Fecha</th>
-                      <th className="px-4 py-2">Tipo</th>
-                      <th className="px-4 py-2">Nota</th>
-                      <th className="px-4 py-2">Feedback</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {subject.tests.map(test => (
-                      <tr key={test.id} className="border-b">
-                        <td className="px-4 py-2">{test.fecha}</td>
-                        <td className="px-4 py-2">{test.tipo}</td>
-                        <td className="px-4 py-2">{test.nota}</td>
-                        <td className="px-4 py-2">{test.feedback}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-                <div className="mt-4">
-                    <h3>Promedio final: {promedio}</h3>
-                </div>
+                  <div className="max-w-full overflow-x-auto"> 
+                    <table className="min-w-full bg-white">
+                      <thead className="bg-pennBlue text-white">
+                        <tr className="">
+                          <th className=" border border-gray-300 px-4 py-2">Fecha</th>
+                          <th className=" border border-gray-300 px-4 py-2">Tipo</th>
+                          <th className=" border border-gray-300 px-4 py-2">Nota</th>
+                          <th className=" border border-gray-300 px-4 py-2">Feedback</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {subject.tests.map(test => (
+                          <tr key={test.id} className="border-b hover:bg-gray-300">
+                            <td className=" border border-gray-300 px-4 py-2  bg-argentinianBlue_logo">{test.fecha}</td>
+                            <td className=" border border-gray-300 px-4 py-2">{test.tipo}</td>
+                            <td className=" border border-gray-300 px-4 py-2">{test.nota}</td>
+                            <td className=" border border-gray-300 px-4 py-2">{test.feedback}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="mt-4">
+                      <h3>Promedio final: {promedio}</h3>
+                  </div>
+                
             </div>
             
         </section>
