@@ -7,12 +7,12 @@ import icon4 from "../asset/icon_estudiantes.png"
 import iconUser from "../asset/userimage.png" 
 
 
-const Parents = () => {
+const Parents = (props) => {
   return (
     <>
     <Header/>
     <section className="flex flex-col place-content-center  items-center">
-        <NombreUsuario img={iconUser} alt="Foto de Usuario" saludo="Hola " nombre="Nombre.Padres" role="Padres" />
+        <NombreUsuario img={iconUser} alt="Foto de Usuario" saludo="Hola " nombre={props.name} apellido={props.lastname} role="Padre/Madre" />
 
         <Titulos 
             title="Home" />      

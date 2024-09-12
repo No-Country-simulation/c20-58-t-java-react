@@ -17,9 +17,9 @@ console.log(errors);
   const navigate =useNavigate();
 
 const users = [
-  {userId:'23789456', password:'Pa23789456',role:'parents'},
-  {userId:'34675123', password:'Es34675123',role:'student'},
-  {userId:'5341078', password:'Te5341078',role:'teacher'}
+  {userId:'23789456', password:'Pa23789456',role:'parents', name:'Jane', lastname:'Doe'},
+  {userId:'34675123', password:'Es34675123',role:'student', name:'John', lastname:'Doe'},
+  {userId:'5341078', password:'Te5341078',role:'teacher', name:'Sophia', lastname:'Rose'}
 ]
 
 
@@ -32,13 +32,13 @@ const users = [
     if(user){
       switch(user.role){
         case 'student':
-          navigate('/student');
+          navigate(`/student/${user.userId}`);
           break;
         case 'teacher':
-          navigate('/teacher');
+          navigate(`/teacher`);
           break;
         case 'parents':
-          navigate('/parent')    
+          navigate(`/parent`)    
           break;
         default:
           setAuthError('Rol no encontrado');

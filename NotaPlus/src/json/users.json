@@ -1,0 +1,102 @@
+[
+    {
+        "userId":23789456, 
+        "password":"Pa23789456",
+        "role":"Padre/Madre",
+        " name":"Jane", 
+        "lastname":"Doe"
+    },
+    {
+        "userId":34675123, 
+        "password":"Es34675123",
+        "role":"Estudiante", 
+        "name":"John", 
+        "lastname":"Doe",
+        "subjects":[
+            {
+              "id": 1,
+              "name": "Matemática II",
+              "course": "2do año",
+              "tests": [
+                {
+                  "id": 101,
+                  "fecha": "2024-08-20",
+                  "tipo": "Parcial",
+                  "nota": 8,
+                  "feedback": "Buen trabajo, sigue mejorando"
+                },
+                {
+                  "id": 102,
+                  "fecha": "2024-09-01",
+                  "tipo": "Final",
+                  "nota": 9,
+                  "feedback": "Excelente desempeño"
+                }
+              ]
+            },
+            {
+              "id": 2,
+              "name": "Química I",
+              "course": "2do año",
+              "tests": [
+                {
+                  "id": 201,
+                  "fecha": "2024-08-20",
+                  "tipo": "Parcial",
+                  "nota": 7,
+                  "feedback": "Esfuerzo aceptable"
+                },
+                {
+                  "id": 202,
+                  "fecha": "2024-09-01",
+                  "tipo": "Final",
+                  "nota": 6,
+                  "feedback": "Debes mejorar"
+                }
+              ]
+            },
+            {
+              "id": 3,
+              "name": "Inglés I",
+              "course": "2do año",
+              "tests": [
+                {
+                  "id": 301,
+                  "fecha": "2024-08-15",
+                  "tipo": "Prueba corta",
+                  "nota": 7,
+                  "feedback": "Buen progreso, pero revisa el tema 3"
+                }
+              ]
+            },
+            {
+              "id": 4,
+              "name": "Geografía II",
+              "course": "2do año",
+              "tests": [
+                {
+                  "id": 401,
+                  "fecha": "2024-08-20",
+                  "tipo": "Parcial",
+                  "nota": 8,
+                  "feedback": "Buen trabajo"
+                },
+                {
+                  "id": 402,
+                  "fecha": "2024-09-01",
+                  "tipo": "Final",
+                  "nota": 9,
+                  "feedback": "Excelente desempeño"
+                }
+              ]
+            }
+          ]
+
+    },
+    {
+        "userId":5341078, 
+        "password":"Te5341078",
+        "role":"Profesor/a", 
+        "name":"Sophia", 
+        "lastname":"Rose"}
+]
