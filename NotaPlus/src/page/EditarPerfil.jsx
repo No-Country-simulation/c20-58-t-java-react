@@ -31,7 +31,7 @@ const EditarPerfil = () => {
               permitir modificar password, email y agregar foto(lo cual genera una petición put)
           */}
 
-        <div className="overflow-y-auto h-80 scrollbar-hide scroll-smooth  max-w-3xl w-full">
+        <div className="overflow-y-auto h-96 scrollbar-hide scroll-smooth  max-w-3xl w-full mt-4">
           <form className="flex flex-col items-center" onSubmit={onSubmit}>
             <Titulos title="Editar Perfil" />
 

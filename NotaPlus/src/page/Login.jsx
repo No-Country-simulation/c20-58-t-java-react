@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 import Button1 from "../components/Button1";
 import Footer from "../components/Footer";
 import logo from "../asset/notaPlusLogo.svg";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
+
+
 function Login() {
   const {
     register,
@@ -12,14 +15,24 @@ function Login() {
     reset,
   } = useForm();
 
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword); 
+  };
+
 console.log(errors);
   const [authError, setAuthError] = useState('');
   const navigate =useNavigate();
 
+
+  // es solo para probar validación y autenticación, Se debe conectar a base de datos o api
 const users = [
-  {userId:'23789456', password:'Pa23789456',role:'parents'},
-  {userId:'34675123', password:'Es34675123',role:'student'},
-  {userId:'5341078', password:'Te5341078',role:'teacher'}
+  {userId:'23789456', password:'Pa23789456',role:'parents', name:'Jane', lastname:'Doe'},
+  {userId:'34675123', password:'Es34675123',role:'student', name:'John', lastname:'Doe'},
+  {userId:'5341078', password:'Te5341078',role:'teacher', name:'Sophia', lastname:'Rose'},
+  {userId:'32555124', password:'Es32555124',role:'student', name:'Emily', lastname:'Smith'},
+  {userId:'33225146', password:'Es33225146',role:'student', name:'David', lastname:'Lee'},
 ]
 
 
@@ -32,13 +45,13 @@ const users = [
     if(user){
       switch(user.role){
         case 'student':
-          navigate('/student');
+          navigate(`/student/${user.userId}`);
           break;
         case 'teacher':
-          navigate('/teacher');
+          navigate(`/teacher`);
           break;
         case 'parents':
-          navigate('/parent')    
+          navigate(`/parent`)    
           break;
         default:
           setAuthError('Rol no encontrado');
@@ -50,7 +63,7 @@ const users = [
   });
 
   return (
-    <section className="flex flex-col content-center min-h-[100vh] place-content-center">
+    <section className="flex flex-col content-center max-h-[100vh] place-content-center">
       <div className="flex flex-col lg:max-xl:w-[95%] md:self-center  md:border-blue-400 md:border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
         <img
           src={logo}
@@ -78,12 +91,12 @@ const users = [
             </span>
           )}
 
-          <div className="flex flex-col">
+          <div className=" relative flex flex-col">
             <label htmlFor="password" className="text-white mt-[1rem]">
               Contraseña
             </label>
             <input
-              type="password"
+              type={showPassword ? "text" : "password"} 
               className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
               {...register("password", {
                 required:{
@@ -98,21 +111,34 @@ const users = [
               })}
             />
             {errors.password && (
-              <span className="block mb-4 text-s text-red-600">
+              <span className="block mb-4 font-bold text-s text-red-600">
                 {errors.password.message}
               </span>
             )}
-
-            <span className="flex justify-end items-end">
-              <i
-                onClick={() => {
-                  console.log("Tilin");
-                }}
-                className="max-sm:text-white absolute mb-[1rem] md:pr-[.5rem] cursor-pointer"
-              >
-                icono
-              </i>
+            <span onClick={togglePasswordVisibility} className="absolute right-2 top-14 cursor-pointer text-gray-500">
+              {showPassword ? <FaEyeSlash /> : <FaEye />} 
             </span>
+
+
+            {/* <span className="flex justify-end items-end">
+                <img
+                    onClick={() => {
+                      console.log("Tilin");
+                    }}
+                    className="max-sm:text-white absolute mb-[1rem] md:pr-[.5rem] cursor-pointer"
+                  >
+                    icono
+                </img>
+            </span> */}
+
+
+
+
+
+
+
+
+
           </div>
 
           <p className="text-white mt-[1rem]">
