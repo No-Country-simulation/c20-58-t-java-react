@@ -11,7 +11,7 @@ const Perfil = (props) => {
       <Header />
       <section className="flex flex-col place-content-center items-center">
         <NombreUsuario nombre="Nombre.Usuario" />
-        <div className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth gap-8">
+        <div className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-96 scrollbar-hide gap-8">
           <div className="w-full text-right justify-self-end">
             <Link to="/editprofile" className="text-white underline ">
               {" "}

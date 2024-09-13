@@ -1,13 +1,15 @@
-[
+{"users": [
+
     {
-        "userId":23789456, 
+
+        "id":23789456, 
         "password":"Pa23789456",
         "role":"Padre/Madre",
         " name":"Jane", 
         "lastname":"Doe"
     },
     {
-        "userId":34675123, 
+        "id":34675123, 
         "password":"Es34675123",
         "role":"Estudiante", 
         "name":"John", 
@@ -93,14 +95,14 @@
           ]
     },
     {
-        "userId":5341078, 
+        "id":5341078, 
         "password":"Te5341078",
         "role":"Profesor/a", 
         "name":"Sophia", 
         "lastname":"Rose"
     },
     {
-      "userId": 32555124,
+      "id": 32555124,
       "password": "Es32555124",
       "role": "Estudiante",
       "name": "Emily",
@@ -186,7 +188,7 @@
       ]
     },
     {
-      "userId": 33225146,
+      "id": 33225146,
       "password": "Es33225146",
       "role": "Estudiante",
       "name": "David",
@@ -251,5 +253,6 @@
           }
       ]    
     }
-]
+]}
+
 

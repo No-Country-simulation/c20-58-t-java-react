@@ -10,9 +10,11 @@ import { useParams } from "react-router-dom";
 import users from "../json/users.json"
 
 
+
 const Student = () => {
+  
     const { studentId } = useParams();
-    const student= users.find(user=>user.userId===parseInt(studentId))
+    const student= users.users.find(user=>user.id===parseInt(studentId))
     if (!student) {
         return <div className="flex place-content-center"> <h2 className="text-white">Estudiante no encontrado</h2></div>;
     }
@@ -42,6 +44,7 @@ const Student = () => {
             </div>
             
         </section>
+    
 
         <FooterNavBar/>  
 

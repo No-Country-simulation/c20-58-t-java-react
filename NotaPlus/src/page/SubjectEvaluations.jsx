@@ -11,7 +11,7 @@ const SubjectEvaluations = () => {
     const {studentId,subjectId} = useParams();
     
     //Busco datos del estudiante
-    const student = users.find(user => user.userId === parseInt(studentId));
+    const student = users.users.find(user => user.id === parseInt(studentId));
         if (!student) {
           return <div className="flex place-content-center"> <h2 className="text-white">Estudiante no encontrado</h2></div>;
         } 
