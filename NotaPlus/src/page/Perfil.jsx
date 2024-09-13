@@ -11,7 +11,7 @@ const Perfil = () => {
       <Header />
       <section className="flex flex-col place-content-center items-center">
         <NombreUsuario nombre="Nombre.Usuario" />
-        <div className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth gap-8">
+        <div className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth gap-8 min-h-[70vh] mt-[2rem] p-[1.2rem]">
           <div className="w-full text-right justify-self-end">
             <Link to="/editprofile" className="text-white underline ">
               {" "}
@@ -25,7 +25,7 @@ const Perfil = () => {
                   permitir modificar password, email y agregar foto(lo cual genera una petición put)
               */}
 
-          <div className="max-w-3xl w-full ml-4 backdrop-blur-sm bg-white/30 rounded-xl p-8">
+          <div className="max-w-3xl w-full backdrop-blur-sm bg-white/30 rounded-xl p-8">
             <Subtitulos title="Detalles Personales" />
             <hr className="pt-4"></hr>
             <p>Domicilio:</p>
@@ -33,8 +33,10 @@ const Perfil = () => {
             <p>E-mail:</p>
           </div>
 
-          <div className="max-w-3xl w-full ml-4 backdrop-blur-sm bg-white/30 rounded-xl p-8">
-            <Subtitulos title="Información Padres/Tutores" />
+          <div className="max-w-3xl w-full backdrop-blur-sm bg-white/30 rounded-xl p-8">
+            <h4 className="w-full font-bold font-secondary text-left text-pennBlue_bg text-[1.2rem] mb-4">
+              Información Padres/Tutores
+            </h4>
 
             <div className="overflow-x-auto rounded-[2rem]">
               <table className="min-w-full table-auto border border-gray-300 bg-white">
@@ -78,7 +80,7 @@ const Perfil = () => {
             </div>
           </div>
 
-          <div className="max-w-3xl w-full ml-4 backdrop-blur-sm bg-white/30 rounded-xl p-8">
+          <div className="max-w-3xl w-full backdrop-blur-sm bg-white/30 rounded-xl p-8">
             <Subtitulos title="Detalles de Materias" />
             <hr className="pt-4"></hr>
             <ul>
