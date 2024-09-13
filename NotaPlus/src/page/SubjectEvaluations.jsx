@@ -40,7 +40,7 @@ const SubjectEvaluations = () => {
                 title={subject.name}/>  
 
             <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
-                  <div className="max-w-full overflow-x-auto"> 
+                  <div className="overflow-x-auto scrollbar-hide"> 
                     <table className="min-w-full bg-white">
                       <thead className="bg-pennBlue text-white">
                         <tr className="">
