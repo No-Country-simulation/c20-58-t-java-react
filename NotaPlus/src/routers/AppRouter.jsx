@@ -24,7 +24,7 @@ function AppRouter() {
           <Route path="/messages" element={<Mensajes />} />
           <Route path="/profile" element={<Perfil />} />
           <Route path="/editprofile" element={<EditarPerfil />} />
-          <Route path="/teacher/subject" element={<Subject />} />
+          <Route path="/subject" element={<Subject />} />
           <Route path="/activities" element={<Activities />} />
           <Route path="/politica" element={<PoliticaPrivacidad />} />
         </Routes>

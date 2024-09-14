@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-
 import { Header } from "../components/Header";
 import NombreUsuario from "../components/NombreUsuario";
 import Titulos from "../components/Titulos";
@@ -37,7 +36,7 @@ const EditarPerfil = () => {
 
             <Label para="email" title="E-mail:" />
             <input
-              className="w-full p-2 mb-1"
+              className="w-full p-2 mb-1 rounded-md"
               type="email"
               placeholder="Email..."
               {...register("email", {
@@ -57,7 +56,7 @@ const EditarPerfil = () => {
 
             <Label para="password" title="Nueva Contraseña: " />
             <input
-              className="w-full p-2 mt-1 mb-1"
+              className="w-full p-2 mt-1 mb-1 rounded-md"
               type="password"
               placeholder="Escriba Nueva Contraseña..."
               {...register("password", {
