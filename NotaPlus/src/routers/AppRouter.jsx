@@ -13,7 +13,10 @@ import Activities from "../page/Activities";
 import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
 
 
+
 function AppRouter() {
+
+
   return (
     <>
       <div>
@@ -24,10 +27,10 @@ function AppRouter() {
           
         {/* Ruta dinámica de student y sus subrutas */}
           <Route path="/student/:userId" element={<Student />} />
-          <Route path="/student/:userId/evaluations/:subjectId" element={<SubjectEvaluations />} />
+          <Route path="/student/:userId/evaluations/:subjectId" element={<SubjectEvaluations /> } />
           
         {/* Ruta dinámica de parents y sus subrutas */}
-          <Route path="/parent/:userId" element={<Parents />} />
+          <Route path="/parent/:userId" element={<Parents /> } />
           
         {/* Ruta dinámica de teacher y sus subrutas */}  
           <Route path="/teacher/:userId" element={<Teacher />}/>

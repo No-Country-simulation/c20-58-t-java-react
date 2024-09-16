@@ -7,7 +7,13 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useState } from "react";
 
 
+
+
 function Login() {
+
+  
+  
+
   const {
     register,
     handleSubmit,
@@ -31,7 +37,7 @@ const users = [
   {userId:'23789456', password:'Pa23789456',role:'parents', name:'Jane', lastname:'Doe'},
   {userId:'34675123', password:'Es34675123',role:'student', name:'John', lastname:'Doe'},
   {userId:'5341078', password:'Te5341078',role:'teacher', name:'Sophia', lastname:'Rose'},
-  {userId:'32555124', password:'Es32555124',role:'student', name:'Emily', lastname:'Smith'},
+  {userId:'32555124', password:'Es32555124',role:'student', name:'Emily', lastname:'SDoe'},
   {userId:'33225146', password:'Es33225146',role:'student', name:'David', lastname:'Lee'},
 ]
 
@@ -43,6 +49,9 @@ const users = [
     
     const user= users.find(user =>user.userId === data.userId && user.password===data.password);
     if(user){
+
+
+
       switch(user.role){
         case 'student':
           navigate(`/student/${user.userId}`);
@@ -63,8 +72,8 @@ const users = [
   });
 
   return (
-    <section className="flex flex-col content-center max-h-[100vh] place-content-center">
-      <div className="flex flex-col lg:max-xl:w-[95%] md:self-center  md:border-blue-400 md:border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
+    <section className="flex flex-col content-center  place-content-center">
+      <div className="flex flex-col max-w-50 md:self-center border-blue-400 border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
         <img
           src={logo}
           alt="logoNotaPlus"
