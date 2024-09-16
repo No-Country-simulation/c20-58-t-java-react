@@ -48,10 +48,10 @@ const users = [
           navigate(`/student/${user.userId}`);
           break;
         case 'teacher':
-          navigate(`/teacher`);
+          navigate(`/teacher/${user.userId}`);
           break;
         case 'parents':
-          navigate(`/parent`)    
+          navigate(`/parent/${user.userId}`)    
           break;
         default:
           setAuthError('Rol no encontrado');

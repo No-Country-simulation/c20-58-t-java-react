@@ -5,8 +5,21 @@
         "id":23789456, 
         "password":"Pa23789456",
         "role":"Padre/Madre",
-        " name":"Jane", 
-        "lastname":"Doe"
+        "name":"Jane", 
+        "lastname":"Doe",
+        "email":"?????@gmail.com",
+        "address":"calle falsa 123",
+        "contact": 123456789,
+        "students":[
+          {"id": 34675123,
+            "name":"John",
+            "lastname":"Doe"
+          },
+          {"id": 32555124,
+            "name":"Emily",
+            "lastname":"Doe"
+          }
+        ]
     },
     {
         "id":34675123, 
@@ -14,6 +27,9 @@
         "role":"Estudiante", 
         "name":"John", 
         "lastname":"Doe",
+        "email":"?????@gmail.com",
+        "address":"calle falsa 123",
+        "contact": 123456789,
         "subjects":[
             {
               "id": 1,
@@ -99,14 +115,21 @@
         "password":"Te5341078",
         "role":"Profesor/a", 
         "name":"Sophia", 
-        "lastname":"Rose"
+        "lastname":"Rose",
+        "email":"?????@gmail.com",
+        "address":"calle falsa 125",
+        "contact": 123456789,
+        "subjects":[]
     },
     {
       "id": 32555124,
       "password": "Es32555124",
       "role": "Estudiante",
       "name": "Emily",
-      "lastname": "Smith",
+      "lastname": "Doe",
+      "email":"?????@gmail.com",
+      "address":"calle falsa 123",
+      "contact": 123456789,
       "subjects": [
           {
               "id": 1,
@@ -193,6 +216,9 @@
       "role": "Estudiante",
       "name": "David",
       "lastname": "Lee",
+      "email":"?????@gmail.com",
+      "address":"calle falsa 127",
+      "contact": 123456789,
       "subjects": [
           {
               "id": 4,

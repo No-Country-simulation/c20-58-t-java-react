@@ -22,20 +22,30 @@ function AppRouter() {
           <Route path="/login" element={<Login />} />
           <Route path="/politica" element={<PoliticaPrivacidad />} />
           
-          {/* Ruta dinámica de student y sus subrutas */}
-          <Route path="/student/:studentId" element={<Student />} />
-          <Route path="/student/:studentId/evaluations/:subjectId" element={<SubjectEvaluations />} />
+        {/* Ruta dinámica de student y sus subrutas */}
+          <Route path="/student/:userId" element={<Student />} />
+          <Route path="/student/:userId/evaluations/:subjectId" element={<SubjectEvaluations />} />
           
+        {/* Ruta dinámica de parents y sus subrutas */}
+          <Route path="/parent/:userId" element={<Parents />} />
+          
+        {/* Ruta dinámica de teacher y sus subrutas */}  
+          <Route path="/teacher/:userId" element={<Teacher />}/>
+          <Route path="/teacher/:userId/subject" element={<Subject />} />
+          <Route path="/teacher/:userId/subject/:subjectId" element="" />{/* falta hacer */}
+          <Route path="/teacher/:userId/activities" element={<Activities />} />
+
+
+        {/* Ruta dinámica profile y edit profile*/}  
+          <Route path="/profile/:userId" element={<Perfil />} />
+          <Route path="/profile/:userId/editprofile" element={<EditarPerfil />} />
+
+
+
+          <Route path="/messages/:userId" element={<Mensajes />} />
 
           
-          <Route path="/parent" element={<Parents id="523" name="Jane " lastname="Doe" role="Padre/madre"/>} />
-          <Route path="/teacher" element={<Teacher id="123" name="Sophia " lastname="Rose" role="Profesor/a"/>}/>
-
-          <Route path="/messages" element={<Mensajes />} />
-          <Route path="/profile" element={<Perfil />} />
-          <Route path="/editprofile" element={<EditarPerfil />} />
-          <Route path="/teacher/subject" element={<Subject />} />
-          <Route path="/activities" element={<Activities />} />
+          
           
         </Routes>
       </div>

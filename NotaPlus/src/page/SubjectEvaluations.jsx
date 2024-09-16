@@ -8,10 +8,10 @@ import { useParams } from 'react-router-dom';
 
 
 const SubjectEvaluations = () => {
-    const {studentId,subjectId} = useParams();
+    const {userId,subjectId} = useParams();
     
     //Busco datos del estudiante
-    const student = users.users.find(user => user.id === parseInt(studentId));
+    const student = users.users.find(user => user.id === parseInt(userId));
         if (!student) {
           return <div className="flex place-content-center"> <h2 className="text-white">Estudiante no encontrado</h2></div>;
         } 
@@ -70,7 +70,7 @@ const SubjectEvaluations = () => {
             
         </section>
 
-        <FooterNavBar/>  
+        <FooterNavBar userId={student.id} role={student.role}/>  
 
     </>
   )

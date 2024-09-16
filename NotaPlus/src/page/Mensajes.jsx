@@ -4,14 +4,24 @@ import { Header } from "../components/Header";
 import NombreUsuario from "../components/NombreUsuario";
 import Titulos from "../components/Titulos";
 import Label from "../components/Label";
+import iconUser from "../asset/userimage.png"
+import users from "../json/users.json"
+import { useParams } from 'react-router-dom';
 import FooterNavBar from "../components/FooterNavBar";
 
 const Mensajes = () => {
+
+  const { userId } = useParams();
+  const file= users.users.find(user=>user.id===parseInt(userId))
+  if (!file) {
+      return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
+  }
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm();
 
@@ -27,7 +37,8 @@ const Mensajes = () => {
     <>
       <Header />
       <section className="flex flex-col items-center">
-          <NombreUsuario nombre="Nombre.Usuario" />
+          <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={file.name} apellido={file.lastname} role={file.role} />
+          
 
           <div className=" overflow-y-auto h-96 scrollbar-hide scroll-smooth pb-[12px] max-w-3xl w-full">
             <form
@@ -212,7 +223,7 @@ const Mensajes = () => {
 
           </div>
       </section>
-      <FooterNavBar />
+      <FooterNavBar userId={file.id} role={file.role}/>
     </>
   );
 };
