@@ -1,4 +1,5 @@
 const NombreUsuario = (params) => {
+
   const { img, alt, saludo, nombre, apellido, role  } = params;
   return (
     <>
@@ -14,10 +15,10 @@ const NombreUsuario = (params) => {
                   <p className="text-silver_borderInput"> {role}</p>  
             </div>
             <hr className="py-4"></hr>
+
       </div>
-      
     </>
-)};
+  );
+};
 
 export default NombreUsuario;
-

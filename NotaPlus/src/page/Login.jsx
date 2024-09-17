@@ -104,6 +104,17 @@ const users = [
             <label htmlFor="password" className="text-white mt-[1rem]">
               Contraseña
             </label>
+            
+            <span className="flex justify-end items-end">
+              <i
+                onClick={() => {
+                  console.log("Tilin");
+                }}
+                className="max-sm:text-white relative top-[1.5rem] md:pr-[.5rem] cursor-pointer"
+              >
+                icono
+              </i>
+            </span>
             <input
               type={showPassword ? "text" : "password"} 
               className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
@@ -118,12 +129,14 @@ const users = [
                     "La contraseña debe tener un mínimo de 8 caracteres, una letra minúscula, una mayúscula y un número",
                 },
               })}
+              
             />
             {errors.password && (
               <span className="block mb-4 font-bold text-s text-red-600">
                 {errors.password.message}
               </span>
             )}
+
             <span onClick={togglePasswordVisibility} className="absolute right-2 top-14 cursor-pointer text-gray-500">
               {showPassword ? <FaEyeSlash /> : <FaEye />} 
             </span>
@@ -139,14 +152,6 @@ const users = [
                     icono
                 </img>
             </span> */}
-
-
-
-
-
-
-
-
 
           </div>
 

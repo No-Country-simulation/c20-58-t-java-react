@@ -30,9 +30,11 @@ const Perfil = () => {
     <>
       <Header />
       <section className="flex flex-col place-content-center items-center">
+
         <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={user.name} apellido={user.lastname} role={user.role} />
         
         <div className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-96 scrollbar-hide gap-8">
+
           <div className="w-full text-right justify-self-end">
             
               {" "}
@@ -47,8 +49,10 @@ const Perfil = () => {
 
 
 
+
           <div className="max-w-3xl w-full ml-4 backdrop-blur-sm bg-white/30 rounded-xl p-8">
             <Subtitulos title="Detalles Personales" />
+
             <hr className="pt-4"></hr>
             <p>Domicilio: {user.address}</p>
             <p>DNI: {user.id}</p>

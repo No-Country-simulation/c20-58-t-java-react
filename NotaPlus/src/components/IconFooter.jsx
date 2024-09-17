@@ -7,7 +7,7 @@ export const IconFooter = (params) => {
         <li>
             
                 <img className="h_[44px] pointer" src={img} alt={alt} onClick={mustDo}/>
-            
+  
         </li>
     </>
   )

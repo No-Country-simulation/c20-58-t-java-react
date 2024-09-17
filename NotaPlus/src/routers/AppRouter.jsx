@@ -38,7 +38,8 @@ function AppRouter() {
           <Route path="/teacher/:userId/subject/:subjectId" element="" />{/* falta hacer */}
           <Route path="/teacher/:userId/activities" element={<Activities />} />
           <Route path="/teacher/:userId/messages" element={<Mensajes />} />
-
+          <Route path="/teacher/:userId/tests" element="" />{/* falta hacer */}
+            
         {/* Ruta dinámica profile y edit profile*/}  
           <Route path="/profile/:userId" element={<Perfil />} />
           <Route path="/profile/:userId/editprofile" element={<EditarPerfil />} />
