@@ -2,16 +2,17 @@ import { Header } from "../components/Header"
 import NombreUsuario from "../components/NombreUsuario"
 import Titulos from "../components/Titulos"
 import iconUser from "../asset/userimage.png"
+import ProgressBar from "../components/ProgressBar"
 import FooterNavBar from "../components/FooterNavBar"
 import users from "../json/users.json"
 import { useParams } from 'react-router-dom';
 
 
 const SubjectEvaluations = () => {
-    const {studentId,subjectId} = useParams();
+    const {userId,subjectId} = useParams();
     
     //Busco datos del estudiante
-    const student = users.users.find(user => user.id === parseInt(studentId));
+    const student = users.users.find(user => user.id === parseInt(userId));
         if (!student) {
           return <div className="flex place-content-center"> <h2 className="text-white">Estudiante no encontrado</h2></div>;
         } 
@@ -64,13 +65,14 @@ const SubjectEvaluations = () => {
                   </div>
                   <div className="mt-4">
                       <h3>Promedio final: {promedio}</h3>
+                      <ProgressBar promedio={promedio}/>
                   </div>
                 
             </div>
             
         </section>
 
-        <FooterNavBar/>  
+        <FooterNavBar userId={student.id} role={student.role}/>  
 
     </>
   )

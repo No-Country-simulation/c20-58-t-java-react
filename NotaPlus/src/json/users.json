@@ -5,8 +5,21 @@
         "id":23789456, 
         "password":"Pa23789456",
         "role":"Padre/Madre",
-        " name":"Jane", 
-        "lastname":"Doe"
+        "name":"Jane", 
+        "lastname":"Doe",
+        "email":"?????@gmail.com",
+        "address":"calle falsa 123",
+        "contact": 123456789,
+        "students":[
+          {"id": 34675123,
+            "name":"John",
+            "lastname":"Doe"
+          },
+          {"id": 32555124,
+            "name":"Emily",
+            "lastname":"Doe"
+          }
+        ]
     },
     {
         "id":34675123, 
@@ -14,6 +27,9 @@
         "role":"Estudiante", 
         "name":"John", 
         "lastname":"Doe",
+        "email":"?????@gmail.com",
+        "address":"calle falsa 123",
+        "contact": 123456789,
         "subjects":[
             {
               "id": 1,
@@ -45,15 +61,15 @@
                   "id": 201,
                   "fecha": "2024-08-20",
                   "tipo": "Parcial",
-                  "nota": 7,
-                  "feedback": "Esfuerzo aceptable"
+                  "nota": 4,
+                  "feedback": "Vamos, puedes mejorar"
                 },
                 {
                   "id": 202,
                   "fecha": "2024-09-01",
                   "tipo": "Final",
                   "nota": 6,
-                  "feedback": "Debes mejorar"
+                  "feedback": "Mejor. Te felicito,  sé que puedes esforzarte más"
                 }
               ]
             },
@@ -99,14 +115,46 @@
         "password":"Te5341078",
         "role":"Profesor/a", 
         "name":"Sophia", 
-        "lastname":"Rose"
+        "lastname":"Rose",
+        "email":"?????@gmail.com",
+        "address":"calle falsa 125",
+        "contact": 123456789,
+        "subjects":[
+          {
+            "id": 1,
+              "name": "Inglés I",
+              "course": "1er año",
+              "tests": []
+          },
+          {
+            "id": 2,
+              "name": "Inglés II",
+              "course": "2do año",
+              "tests": []
+          },
+          {
+            "id": 3,
+              "name": "Lengua I",
+              "course": "1er año",
+              "tests": []
+          },
+          {
+            "id": 4,
+              "name": "Inglés II",
+              "course": "2do año",
+              "tests": []
+          }
+        ]
     },
     {
       "id": 32555124,
       "password": "Es32555124",
       "role": "Estudiante",
       "name": "Emily",
-      "lastname": "Smith",
+      "lastname": "Doe",
+      "email":"?????@gmail.com",
+      "address":"calle falsa 123",
+      "contact": 123456789,
       "subjects": [
           {
               "id": 1,
@@ -116,9 +164,9 @@
                   {
                       "id": 501,
                       "fecha": "2024-09-15",
-                      "tipo": "Ensayo",
+                      "tipo": "Parcial",
                       "nota": 8.5,
-                      "feedback": "Buen análisis, pero cuida la ortografía"
+                      "feedback": "Muy bien, sigue así"
                   }
               ]
           },
@@ -130,9 +178,9 @@
                   {
                     "id": 501,
                     "fecha": "2024-08-20",
-                    "tipo": "Parcial",
+                    "tipo": "Ensayo",
                     "nota": 8,
-                    "feedback": "Buen trabajo"
+                    "feedback": "Buen análisis, pero cuida la ortografía"
                   },
                   {
                       "id": 502,
@@ -193,6 +241,9 @@
       "role": "Estudiante",
       "name": "David",
       "lastname": "Lee",
+      "email":"?????@gmail.com",
+      "address":"calle falsa 127",
+      "contact": 123456789,
       "subjects": [
           {
               "id": 4,

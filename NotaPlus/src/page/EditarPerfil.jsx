@@ -1,13 +1,23 @@
 import { useForm } from "react-hook-form";
-
 import { Header } from "../components/Header";
 import NombreUsuario from "../components/NombreUsuario";
 import Titulos from "../components/Titulos";
 import Label from "../components/Label";
 import Button1 from "../components/Button1";
 import FooterNavBar from "../components/FooterNavBar";
+import iconUser from "../asset/userimage.png"
+import users from "../json/users.json"
+import { useParams } from 'react-router-dom';
 
 const EditarPerfil = () => {
+
+  const { userId } = useParams();
+  const file= users.users.find(user=>user.id===parseInt(userId))
+  if (!file) {
+      return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
+  }
+
+
   const {
     register,
     handleSubmit,
@@ -25,7 +35,8 @@ const EditarPerfil = () => {
     <>
       <Header />
       <section className="flex flex-col items-center">
-        <NombreUsuario nombre="Nombre.Usuario" />
+        <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={file.name} apellido={file.lastname} role={file.role} />
+        
 
         {/* {Acá se debe hacer una petición get por Id} 
               permitir modificar password, email y agregar foto(lo cual genera una petición put)
@@ -37,7 +48,7 @@ const EditarPerfil = () => {
 
             <Label para="email" title="E-mail:" />
             <input
-              className="w-full p-2 mb-1"
+              className="w-full p-2 mb-1 rounded-md"
               type="email"
               placeholder="Email..."
               {...register("email", {
@@ -57,7 +68,7 @@ const EditarPerfil = () => {
 
             <Label para="password" title="Nueva Contraseña: " />
             <input
-              className="w-full p-2 mt-1 mb-1"
+              className="w-full p-2 mt-1 mb-1 rounded-md"
               type="password"
               placeholder="Escriba Nueva Contraseña..."
               {...register("password", {
@@ -102,7 +113,7 @@ const EditarPerfil = () => {
           </form>
         </div>
       </section>
-      <FooterNavBar />
+      <FooterNavBar userId={file.id} role={file.role}/>
     </>
   );
 };

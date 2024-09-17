@@ -4,14 +4,24 @@ import { Header } from "../components/Header";
 import NombreUsuario from "../components/NombreUsuario";
 import Titulos from "../components/Titulos";
 import Label from "../components/Label";
+import iconUser from "../asset/userimage.png"
+import users from "../json/users.json"
+import { useParams } from 'react-router-dom';
 import FooterNavBar from "../components/FooterNavBar";
 
 const Mensajes = () => {
+
+  const { userId } = useParams();
+  const file= users.users.find(user=>user.id===parseInt(userId))
+  if (!file) {
+      return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
+  }
+
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
     reset,
   } = useForm();
 
@@ -19,7 +29,7 @@ const Mensajes = () => {
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-    alert("Gracias por su consulta. En brevedad responderemos");
+    alert("Gracias, su mensaje fue enviado con éxito");
     reset();
   });
 
@@ -27,7 +37,8 @@ const Mensajes = () => {
     <>
       <Header />
       <section className="flex flex-col items-center">
-          <NombreUsuario nombre="Nombre.Usuario" />
+          <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={file.name} apellido={file.lastname} role={file.role} />
+          
 
           <div className=" overflow-y-auto h-96 scrollbar-hide scroll-smooth pb-[12px] max-w-3xl w-full">
             <form
@@ -111,7 +122,6 @@ const Mensajes = () => {
 
               <Button1
                 typeBtn="submit"
-                link="/messages"
                 text="Enviar"/>
             
               {/* Este botón además debe realizar una petición post para crear el nuevo resgistro de mensaje */}
@@ -147,7 +157,7 @@ const Mensajes = () => {
               </div>
 
               <table className="max-w-3xl w-full">
-                <thead id="tabla-header" className="h-[30px] bg-mexicanPink_logo">
+                <thead id="tabla-header" className="h-[30px] bg-pennBlue text-white">
                   <tr>
                     <th className="text-[15px] border border-solid border-resolutionBlue_footer">
                       FECHA
@@ -155,7 +165,7 @@ const Mensajes = () => {
                     <th className="text-[15px] border border-solid border-resolutionBlue_footer">
                       ASUNTO
                     </th>
-                    <th className="text-[15px] border border-solid border-resolutionBlue_footer">
+                    <th className="text-[13px] border border-solid border-resolutionBlue_footer">
                       DESTINATARIO
                     </th>
                     <th className="text-[15px] border border-solid border-resolutionBlue_footer">
@@ -164,8 +174,8 @@ const Mensajes = () => {
                   </tr>
                 </thead>
                 <tbody id="tabla-body">
-                  <tr className="bg-white ">
-                    <td className="h-[25px] text-center text-[15px] border border-solid border-resolutionBlue_footer">
+                  <tr className="bg-white hover:bg-gray-300">
+                    <td className="bg-argentinianBlue_logo h-[25px] text-center text-[15px] border border-solid border-resolutionBlue_footer">
                       06/09/2024
                     </td>
                     <td className="h-[25px] text-center text-[15px]  border border-solid border-resolutionBlue_footer text-wrap  px-2">
@@ -178,8 +188,8 @@ const Mensajes = () => {
                       <button>Ver</button>
                     </td>
                   </tr>
-                  <tr className="bg-white ">
-                    <td className="h-[25px] text-center text-[15px] border border-solid border-resolutionBlue_footer">
+                  <tr className="bg-white hover:bg-gray-300">
+                    <td className="bg-argentinianBlue_logo h-[25px] text-center text-[15px] border border-solid border-resolutionBlue_footer">
                       04/09/2024
                     </td>
                     <td className="h-[25px] text-center text-[15px]  border border-solid border-resolutionBlue_footer text-wrap px-2">
@@ -192,8 +202,8 @@ const Mensajes = () => {
                       <button>Ver</button>
                     </td>
                   </tr>
-                  <tr className="bg-white ">
-                    <td className="h-[25px] text-center text-[15px] border border-solid border-resolutionBlue_footer">
+                  <tr className="bg-white hover:bg-gray-300">
+                    <td className="bg-argentinianBlue_logo h-[25px] text-center text-[15px] border border-solid border-resolutionBlue_footer">
                       01/09/2024
                     </td>
                     <td className="h-[25px] text-center text-[15px]  border border-solid border-resolutionBlue_footer text-wrap px-2">
@@ -212,7 +222,7 @@ const Mensajes = () => {
 
           </div>
       </section>
-      <FooterNavBar />
+      <FooterNavBar userId={file.id} role={file.role}/>
     </>
   );
 };
