@@ -5,7 +5,7 @@ import womanUser from "../asset/womanUser.png";
 import NombreUsuario from "../components/NombreUsuario";
 import FooterNavBar from "../components/FooterNavBar";
 import NombreUsuarioSubject from "../components/NombreUsuarioSubject";
-import { CardsSubject } from "../components/CardsSubject";
+import { CardsSubjectInfo } from "../components/Cards";
 import subjectImage from "../asset/subjectImage.png";
 import { Link } from "react-router-dom";
 import users from "../json/users.json"
@@ -21,6 +21,7 @@ function Subject() {
   if (!teacher) {
       return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
   }
+
   
   const stateSubject = useSelector((state) => state.subjects.subject);
   console.log(stateSubject);
@@ -35,7 +36,7 @@ function Subject() {
             return (
             
                 <div key={id}className="border-2  border-green-700 p-2 rounded-lg min-h-[10rem] bg-white">
-                    <CardsSubject img={subjectImage} alt="ImageSubject" />
+                    <CardsSubjectInfo img={subjectImage} alt="ImageSubject"  userId={teacher.id} subjectId={id}/>
                     <h2 className="text-lg uppercase text-azulClaroBase">{subject}</h2>
                     <p className="text-grey_user">{group}</p>
                 </div>

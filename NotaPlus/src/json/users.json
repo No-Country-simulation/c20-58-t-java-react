@@ -61,15 +61,15 @@
                   "id": 201,
                   "fecha": "2024-08-20",
                   "tipo": "Parcial",
-                  "nota": 7,
-                  "feedback": "Esfuerzo aceptable"
+                  "nota": 4,
+                  "feedback": "Vamos, puedes mejorar"
                 },
                 {
                   "id": 202,
                   "fecha": "2024-09-01",
                   "tipo": "Final",
                   "nota": 6,
-                  "feedback": "Debes mejorar"
+                  "feedback": "Mejor. Te felicito,  sé que puedes esforzarte más"
                 }
               ]
             },
@@ -119,7 +119,32 @@
         "email":"?????@gmail.com",
         "address":"calle falsa 125",
         "contact": 123456789,
-        "subjects":[]
+        "subjects":[
+          {
+            "id": 1,
+              "name": "Inglés I",
+              "course": "1er año",
+              "tests": []
+          },
+          {
+            "id": 2,
+              "name": "Inglés II",
+              "course": "2do año",
+              "tests": []
+          },
+          {
+            "id": 3,
+              "name": "Lengua I",
+              "course": "1er año",
+              "tests": []
+          },
+          {
+            "id": 4,
+              "name": "Inglés II",
+              "course": "2do año",
+              "tests": []
+          }
+        ]
     },
     {
       "id": 32555124,
@@ -139,9 +164,9 @@
                   {
                       "id": 501,
                       "fecha": "2024-09-15",
-                      "tipo": "Ensayo",
+                      "tipo": "Parcial",
                       "nota": 8.5,
-                      "feedback": "Buen análisis, pero cuida la ortografía"
+                      "feedback": "Muy bien, sigue así"
                   }
               ]
           },
@@ -153,9 +178,9 @@
                   {
                     "id": 501,
                     "fecha": "2024-08-20",
-                    "tipo": "Parcial",
+                    "tipo": "Ensayo",
                     "nota": 8,
-                    "feedback": "Buen trabajo"
+                    "feedback": "Buen análisis, pero cuida la ortografía"
                   },
                   {
                       "id": 502,

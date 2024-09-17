@@ -64,3 +64,18 @@ return (
   
 )
 }//fin CardStudent
+
+export const CardsSubjectInfo = (params) => {
+  const { img, alt, userId, subjectId } = params;
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate(`/teacher/${userId}/subjects/${subjectId}`);
+  };
+  
+  return (
+    <div  onClick={handleClick}>
+      <img  className="w-[10rem]" src={img} alt={alt} />
+    </div>
+  );
+};//Fin CardsSubjectInfo
