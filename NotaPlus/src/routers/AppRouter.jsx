@@ -34,10 +34,10 @@ function AppRouter() {
           
         {/* Ruta dinámica de teacher y sus subrutas */}  
           <Route path="/teacher/:userId" element={<Teacher />}/>
-          <Route path="/teacher/:userId/subject" element={<Subject />} />
+          <Route path="/teacher/:userId/subjects" element={<Subject />} />
           <Route path="/teacher/:userId/subject/:subjectId" element="" />{/* falta hacer */}
           <Route path="/teacher/:userId/activities" element={<Activities />} />
-
+          <Route path="/teacher/:userId/messages" element={<Mensajes />} />
 
         {/* Ruta dinámica profile y edit profile*/}  
           <Route path="/profile/:userId" element={<Perfil />} />
@@ -46,7 +46,7 @@ function AppRouter() {
 
 
           <Route path="/messages/:userId" element={<Mensajes />} />
-
+          <Route path="/regainaccess" element=""/> {/* falta hacer */}
           
           
           
