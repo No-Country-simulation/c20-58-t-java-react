@@ -48,11 +48,9 @@ function Activities() {
             <p className="pr-[.3rem]">ICON2</p>
           </div>
         </section> */}
-        <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth  bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl bg-backdrop-blur-sm p-8">
-            {stateTable.map(
-              ({ id, name, noteOne, noteTwo, noteThree, noteFour, stateStudent }) => {
-                return (
-                  <div className="grid grid-flow-col-dense m-[4px]" key={id}>
+        <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl bg-backdrop-blur-sm p-8">
+            
+                  <div className="grid grid-flow-col-dense m-[4px] w-full">
                     <table className="text-center  text-white">
                       <thead className="bg-white">
                         <tr>
@@ -79,76 +77,82 @@ function Activities() {
                           </th>
                         </tr>
                       </thead>
-                      <tbody className="bg-white text-black">
-                        <tr className="border-b border-gray-300">
-                          <td className="grid">
-                            <span className="text-[.7rem]">{name}</span>
-                            <span className="mt-2 bg-red-200 text-red-800 rounded text-[.7rem]">
-                              {stateStudent}
-                            </span>
-                          </td>
-                          <td className="border-2 border-blue-500">
-                            <input
-                              type="number"
-                              name=""
-                              id=""
-                              className="w-[2rem] appearance-none h-[2.5rem]"
-                              value={noteOne}
-                            />
-                          </td>
-                          <td className="border-2 border-blue-500">
-                            <input
-                              type="number"
-                              name=""
-                              id=""
-                              className="w-[2rem] appearance-none h-[2.5rem]"
-                              value={noteTwo}
-                            />
-                          </td>
-                          <td className="border-2 border-blue-500">
-                            <input
-                              type="number"
-                              name=""
-                              id=""
-                              className="w-[2rem] appearance-none h-[2.5rem]"
-                              value={noteThree}
-                            />
-                          </td>
-                          <td className="border-2 border-blue-500">
-                            <input
-                              type="number"
-                              name=""
-                              id=""
-                              className="w-[2rem] appearance-none h-[2.5rem]"
-                              value={noteFour}
-                            />
-                          </td>
-                          <td className="border-2 border-blue-500">
-                            <input
-                              type="number"
-                              name=""
-                              id=""
-                              className="w-[2rem] appearance-none h-[2.5rem]"
-                            />
-                          </td>
-                          <td className="border-2 border-blue-500">
-                            <button className=""><img className="h-[24px]" src={iconMail} alt="feedback" /></button>
-                          </td>
-                        </tr>
+                    
+                      <tbody className="bg-white text-black">  
+                        {stateTable.map(
+                          ({ id, name, noteOne, noteTwo, noteThree, noteFour, stateStudent }) =>
+                             {
+                                  return (
+                                <tr className="border-b border-gray-300" key={id}>
+                                  <td className="grid">
+                                    <span className="text-[.7rem]">{name}</span>
+                                    <span className="my-2 bg-red-200 text-red-800 rounded text-[.7rem]">
+                                      {stateStudent}
+                                    </span>
+                                  </td>
+                                  <td className="border-2 border-blue-500">
+                                    <input
+                                      type="number"
+                                      name=""
+                                      id=""
+                                      className="w-[2rem] appearance-none h-[2.5rem]"
+                                      value={noteOne}
+                                    />
+                                  </td>
+                                  <td className="border-2 border-blue-500">
+                                    <input
+                                      type="number"
+                                      name=""
+                                      id=""
+                                      className="w-[2rem] appearance-none h-[2.5rem]"
+                                      value={noteTwo}
+                                    />
+                                  </td>
+                                  <td className="border-2 border-blue-500">
+                                    <input
+                                      type="number"
+                                      name=""
+                                      id=""
+                                      className="w-[2rem] appearance-none h-[2.5rem]"
+                                      value={noteThree}
+                                    />
+                                  </td>
+                                  <td className="border-2 border-blue-500">
+                                    <input
+                                      type="number"
+                                      name=""
+                                      id=""
+                                      className="w-[2rem] appearance-none h-[2.5rem]"
+                                      value={noteFour}
+                                    />
+                                  </td>
+                                  <td className="border-2 border-blue-500">
+                                    <input
+                                      type="number"
+                                      name=""
+                                      id=""
+                                      className="w-[2rem] appearance-none h-[2.5rem]"
+                                    />
+                                  </td>
+                                  <td className="border-2 border-blue-500">
+                                    <button className=""><img className="h-[24px]" src={iconMail} alt="feedback" /></button>
+                                  </td>
+                                </tr>
+                                );
+                              }
+                          )} 
                       </tbody>
                     </table>
                   </div>
-                );
-              }
-            )}
-            <div className="flex justify-end mt-4">
-              <button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
-                Guardar
-              </button>
-              <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
-                Subir
-              </button>
-            </div>
+
+                  <div className="flex justify-end mt-4 w-full">
+                      <button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
+                        Guardar
+                      </button>
+                      <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
+                        Subir
+                      </button>
+                  </div>
         </div>
       </section>
       <FooterNavBar  userId={teacher.id} role={teacher.role}/>
