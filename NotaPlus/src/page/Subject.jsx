@@ -28,21 +28,23 @@ function Subject() {
   return (
     <>
       <Header />
+      <section className="flex flex-col place-content-center items-center">
        <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
        <Titulos
             title="Materias Dictadas"/>  
-      <section  className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl p-8">
-          {stateSubject.map(({ id, subject, group }) => {
-            return (
-            
-                <div key={id}className="border-2  border-green-700 p-2 rounded-lg min-h-[10rem] bg-white">
-                    <CardsSubjectInfo img={subjectImage} alt="ImageSubject"  userId={teacher.id} subjectId={id}/>
-                    <h2 className="text-lg uppercase text-azulClaroBase">{subject}</h2>
-                    <p className="text-grey_user">{group}</p>
-                </div>
+        <div  className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl p-8">
+            {stateSubject.map(({ id, subject, group }) => {
+              return (
               
-            );
-          })}
+                  <div key={id}className="border-2  border-green-700 p-2 rounded-lg min-h-[10rem] bg-white">
+                      <CardsSubjectInfo img={subjectImage} alt="ImageSubject"  userId={teacher.id} subjectId={id}/>
+                      <h2 className="text-lg uppercase text-azulClaroBase">{subject}</h2>
+                      <p className="text-grey_user">{group}</p>
+                  </div>
+                
+              );
+            })}
+        </div>
       </section>
 
       <FooterNavBar  userId={teacher.id} role={teacher.role}/>
