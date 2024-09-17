@@ -12,7 +12,7 @@ export const Cards = (params) => {
   };
 
   return (
-    <div onClick={handleClick} className="flex flex-col w-[136px] bg-white rounded-lg items-center p-2 border-solid border-[#f1f1f1] shadow-lg shadow-black">
+    <div onClick={handleClick} className="flex flex-col w-[150px] bg-white rounded-lg items-center p-2 border border-green-700 shadow-lg shadow-black">
         <div><img className="h-[72px]" src={img} alt={alt} /></div>
         <h3 className="text-azulClaroBase text-[18px] text-wrap text-center ease-in-out duration-500 hover:uppercase font-bold" >{title}</h3>
     </div>

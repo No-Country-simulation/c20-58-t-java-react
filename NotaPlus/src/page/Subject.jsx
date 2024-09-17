@@ -3,13 +3,15 @@ import { useSelector } from "react-redux";
 import iconUser from "../asset/userimage.png" ;
 import womanUser from "../asset/womanUser.png";
 import NombreUsuario from "../components/NombreUsuario";
-import Footer from "../components/Footer";
+import FooterNavBar from "../components/FooterNavBar";
 import NombreUsuarioSubject from "../components/NombreUsuarioSubject";
 import { CardsSubject } from "../components/CardsSubject";
 import subjectImage from "../asset/subjectImage.png";
 import { Link } from "react-router-dom";
 import users from "../json/users.json"
 import { useParams } from 'react-router-dom';
+import Titulos from "../components/Titulos";
+
 
 
 function Subject() {
@@ -26,32 +28,23 @@ function Subject() {
     <>
       <Header />
        <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
-      
-      {/* <NombreUsuarioSubject img={womanUser} name="Sophia Rose" text='Profesora'/>
-      <hr className="pt-2 w-[70%]"/> */}
+       <Titulos
+            title="Materias Dictadas"/>  
+      <section  className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl p-8">
+          {stateSubject.map(({ id, subject, group }) => {
+            return (
+            
+                <div key={id}className="border-2  border-green-700 p-2 rounded-lg min-h-[10rem] bg-white">
+                    <CardsSubject img={subjectImage} alt="ImageSubject" />
+                    <h2 className="text-lg uppercase text-azulClaroBase">{subject}</h2>
+                    <p className="text-grey_user">{group}</p>
+                </div>
+              
+            );
+          })}
+      </section>
 
-      <hr className="pt-2 w-[70%]" />
-      <div className="flex justify-end mb-4">
-        <p>ICON1</p>
-      </div>
-      <Link to={'/activities'} className="grid grid-cols-2 gap-2">
-      {stateSubject.map(({ id, subject, group }) => {
-        return (
-          <section
-          className=""
-          key={id}
-          >
-            <div className="border-2  border-green-700 p-2 rounded-md min-h-[12rem]">
-              <CardsSubject img={subjectImage} alt="ImageSubject" />
-              <h2 className="text-lg uppercase text-green-500">{subject}</h2>
-              <p className="text-white">{group}</p>
-            </div>
-          </section>
-        );
-      })}
-      </Link>
-
-      <Footer />
+      <FooterNavBar  userId={teacher.id} role={teacher.role}/>
     </>
   );
 }

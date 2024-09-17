@@ -11,6 +11,7 @@ import EditarPerfil from "../page/EditarPerfil";
 import Subject from "../page/Subject";
 import Activities from "../page/Activities";
 import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
+import RegainAccess from "../page/regainaccess";
 
 
 
@@ -47,7 +48,7 @@ function AppRouter() {
 
 
           <Route path="/messages/:userId" element={<Mensajes />} />
-          <Route path="/regainaccess" element=""/> {/* falta hacer */}
+          <Route path="/regainaccess" element={<RegainAccess/>}/> {/* falta hacer */}
           
           
           

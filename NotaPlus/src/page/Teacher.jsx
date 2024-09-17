@@ -23,15 +23,15 @@ const Teacher = () => {
     <>
       <Header />
       <section className="flex flex-col place-content-center items-center">
-      <NombreUsuario img={iconUser} alt="Foto de Usuario" saludo="Hola " nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
-        <Titulos
-            title="Home"/>  
-        <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl p-8">
-          <Cards img={icon1} title="Evaluaciones" alt="icono evaluaciones" link=""/>
-          <Cards img={icon2} title="Materias" alt="icono materias"  userId={userId} sub="subjects" />
-          <Cards img={icon3} title="Actividades" alt="icono actividades"  userId={userId} sub="activities"/>
-          <Cards img={icon4} title="Mensajes" alt="icono mensage"  userId={userId} sub="messages"/>
-        </div>
+        <NombreUsuario img={iconUser} alt="Foto de Usuario" saludo="Hola " nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
+          <Titulos
+              title="Home"/>  
+          <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth  bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl bg-backdrop-blur-sm p-8">
+            <Cards img={icon1} title="Evaluaciones" alt="icono evaluaciones"  userId={userId} sub="tests"/>
+            <Cards img={icon2} title="Materias" alt="icono materias"  userId={userId} sub="subjects" />
+            <Cards img={icon3} title="Actividades" alt="icono actividades"  userId={userId} sub="activities"/>
+            <Cards img={icon4} title="Mensajes" alt="icono mensage"  userId={userId} sub="messages"/>
+          </div>
       </section>
 
       <FooterNavBar  userId={teacher.id} role={teacher.role}/>

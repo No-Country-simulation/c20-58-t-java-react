@@ -4,23 +4,23 @@ const initialState = {
   subject: [
     {
       id: "1",
-      subject: "Lengua",
+      subject: "Inglés I",
       group: "Grupo 1A",
     },
     {
       id: "2",
-      subject: "Matematicas",
-      group: "Grupo 5A",
-    },
-    {
-      id: "3",
-      subject: "Ciencias",
+      subject: "Inglés II",
       group: "Grupo 2A",
     },
     {
+      id: "3",
+      subject: "Lengua I",
+      group: "Grupo 1A",
+    },
+    {
       id: "4",
-      subject: "Filosofia",
-      group: "Grupo 4A",
+      subject: "Lengua II",
+      group: "Grupo 2A",
     },
   ],
 };
