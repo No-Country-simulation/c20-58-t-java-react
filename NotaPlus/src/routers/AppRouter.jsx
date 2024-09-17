@@ -5,12 +5,14 @@ import Student from "../page/Student";
 import SubjectEvaluations from "../page/SubjectEvaluations";
 import Parents from "../page/Parents";
 import Teacher from "../page/Teacher";
+import SubjectInfo from "../page/SubjectInfo";
 import Mensajes from "../page/Mensajes";
 import Perfil from "../page/Perfil";
 import EditarPerfil from "../page/EditarPerfil";
 import Subject from "../page/Subject";
 import Activities from "../page/Activities";
 import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
+import RegainAccess from "../page/regainaccess";
 
 
 
@@ -35,7 +37,7 @@ function AppRouter() {
         {/* Ruta dinámica de teacher y sus subrutas */}  
           <Route path="/teacher/:userId" element={<Teacher />}/>
           <Route path="/teacher/:userId/subjects" element={<Subject />} />
-          <Route path="/teacher/:userId/subject/:subjectId" element="" />{/* falta hacer */}
+          <Route path="/teacher/:userId/subjects/:subjectId" element={<SubjectInfo/>} />
           <Route path="/teacher/:userId/activities" element={<Activities />} />
           <Route path="/teacher/:userId/messages" element={<Mensajes />} />
           <Route path="/teacher/:userId/tests" element="" />{/* falta hacer */}
@@ -47,7 +49,7 @@ function AppRouter() {
 
 
           <Route path="/messages/:userId" element={<Mensajes />} />
-          <Route path="/regainaccess" element=""/> {/* falta hacer */}
+          <Route path="/regainaccess" element={<RegainAccess/>}/> 
           
           
           

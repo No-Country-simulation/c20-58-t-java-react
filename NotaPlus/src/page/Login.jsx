@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Button1 from "../components/Button1";
 import Footer from "../components/Footer";
 import logo from "../asset/notaPlusLogo.svg";
@@ -112,7 +112,7 @@ const users = [
                 }}
                 className="max-sm:text-white relative top-[1.5rem] md:pr-[.5rem] cursor-pointer"
               >
-                icono
+                
               </i>
             </span>
             <input
@@ -157,9 +157,9 @@ const users = [
 
           <p className="text-white mt-[1rem]">
             ¿Olvidaste tu{" "}
-            <a href="#" className="text-blue-600 ">
+            <Link to="/regainaccess" className="text-blue-600 ">
               contraseña?
-            </a>{" "}
+            </Link>{" "}
           </p>
 
 

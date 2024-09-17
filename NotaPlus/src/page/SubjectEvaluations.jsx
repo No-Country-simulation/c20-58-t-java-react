@@ -2,6 +2,7 @@ import { Header } from "../components/Header"
 import NombreUsuario from "../components/NombreUsuario"
 import Titulos from "../components/Titulos"
 import iconUser from "../asset/userimage.png"
+import ProgressBar from "../components/ProgressBar"
 import FooterNavBar from "../components/FooterNavBar"
 import users from "../json/users.json"
 import { useParams } from 'react-router-dom';
@@ -64,6 +65,7 @@ const SubjectEvaluations = () => {
                   </div>
                   <div className="mt-4">
                       <h3>Promedio final: {promedio}</h3>
+                      <ProgressBar promedio={promedio}/>
                   </div>
                 
             </div>

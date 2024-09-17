@@ -29,7 +29,7 @@ const Mensajes = () => {
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-    alert("Gracias por su consulta. En brevedad responderemos");
+    alert("Gracias, su mensaje fue enviado con éxito");
     reset();
   });
 
@@ -122,7 +122,6 @@ const Mensajes = () => {
 
               <Button1
                 typeBtn="submit"
-                link="/messages"
                 text="Enviar"/>
             
               {/* Este botón además debe realizar una petición post para crear el nuevo resgistro de mensaje */}
