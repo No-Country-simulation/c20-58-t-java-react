@@ -1,23 +1,35 @@
 import { Header } from "../components/Header";
 import { useSelector } from "react-redux";
+import iconUser from "../asset/userimage.png" ;
 import womanUser from "../asset/womanUser.png";
+import NombreUsuario from "../components/NombreUsuario";
 import Footer from "../components/Footer";
 import NombreUsuarioSubject from "../components/NombreUsuarioSubject";
 import { CardsSubject } from "../components/CardsSubject";
 import subjectImage from "../asset/subjectImage.png";
 import { Link } from "react-router-dom";
+import users from "../json/users.json"
+import { useParams } from 'react-router-dom';
+
 
 function Subject() {
+  
+  const {userId} = useParams();
+  const teacher= users.users.find(user=>user.id===parseInt(userId))
+  if (!teacher) {
+      return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
+  }
+  
   const stateSubject = useSelector((state) => state.subjects.subject);
   console.log(stateSubject);
   return (
     <>
       <Header />
-      <NombreUsuarioSubject
-        img={womanUser}
-        name="Sophia Rose"
-        text="Profesora"
-      />
+       <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
+      
+      {/* <NombreUsuarioSubject img={womanUser} name="Sophia Rose" text='Profesora'/>
+      <hr className="pt-2 w-[70%]"/> */}
+
       <hr className="pt-2 w-[70%]" />
       <div className="flex justify-end mb-4">
         <p>ICON1</p>

@@ -1,22 +1,38 @@
 import Footer from "../components/Footer";
 import { Header } from "../components/Header";
 import subjectImage from "../asset/subjectImage.png";
-import NombreUsuarioSubject from "../components/NombreUsuarioSubject";
+import iconUser from "../asset/userimage.png"
+import NombreUsuario from "../components/NombreUsuario";
 import { useSelector } from "react-redux";
+import users from "../json/users.json"
+import { useParams } from 'react-router-dom';
 
 function Activities() {
+
+  const {userId} = useParams();
+  const teacher= users.users.find(user=>user.id===parseInt(userId))
+  if (!teacher) {
+      return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
+  }
+
+
+
   const stateTable = useSelector((state) => state.students.students);
   console.log(stateTable);
+
   return (
     <>
       <Header />
-      <NombreUsuarioSubject
+      <NombreUsuario img={iconUser} alt="Foto de Usuario"  nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
+      {/* <NombreUsuarioSubject
         img={subjectImage}
         alt="SubjectUser"
-        name={'Materias 1'}
-        text={'Grupo 1'}
-      />
-      <hr className="pt-2 w-[70%]" />
+
+        name="Materia 1"
+        text="Grupo 1"
+      /> <hr className="pt-2 w-[70%]" />*/}
+      
+
       <section className="flex justify-between mt-[1rem]">
         <p>ICON 3</p>
         <div className="flex">

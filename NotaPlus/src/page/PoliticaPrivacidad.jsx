@@ -16,7 +16,7 @@ const PoliticaPrivacidad = () => {
     <>
     <Header/>
     <section className="flex flex-col place-content-center items-center mb-4">
-        <Titulos title="Políticas de Privacidad" />
+        <Titulos title="Política de Privacidad" />
 
         <div  className="flex max-w-3xl w-full flex-wrap p-4 items-center overflow-y-auto h-96 scrollbar-hide scroll-smooth gap-8 text-white bg-white/30 rounded-xl min-h-[70vh]">
           

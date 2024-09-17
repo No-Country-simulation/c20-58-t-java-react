@@ -13,7 +13,7 @@ export default {
         'white':'#ffffff',
         'grey_user':'#6c7078',
         'primaryBG': '#0f124b',
-        'yellowGreen_Button': '#85C226',
+        'yellowGreen': '#85C226',
         'tea_borderButton':'#008285',
         'palatinateBlue_Button':'#2c45f8',
         'resolutionBlue_footer':'#292782',
@@ -21,7 +21,9 @@ export default {
         'argentinianBlue_logo':'#61b1fd',
         'mexicanPink_logo':'#e11282',
         'internationalKleinBlue_menu':'#2227a5',
-        'pennBlue_bg':'#0d0f3f'
+        'pennBlue':'#0d0f3f',
+        'azulClaroBase': '#64B2FA'
+
 
 
       },
@@ -32,7 +34,7 @@ export default {
       backgroundImage: {
         'custom': 'linear-gradient(90deg, #0D0F3F 0%, #2227A5 100%)',
         'fondoOpcion1': "url('/src/asset/fondoOpcion1.png')",
-        'fondoOpcion2': "url('/src/asset/fondoOpcion2.png')"
+      
 
       },
     },
