@@ -72,7 +72,7 @@ const users = [
   });
 
   return (
-    <section className="flex flex-col content-center  place-content-center">
+    <section className="flex flex-col content-center  place-content-center min-h-[100vh]">
       <div className="flex flex-col max-w-50 md:self-center border-blue-400 border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
         <img
           src={logo}
