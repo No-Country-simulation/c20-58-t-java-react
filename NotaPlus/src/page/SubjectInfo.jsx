@@ -25,7 +25,7 @@ const SubjectInfo = () => {
         <Titulos
              text="Información de "
               title={subject.name}/>  
-            <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scrollbar-hide scroll-smooth backdrop-blur-sm bg-white/30 rounded-xl p-8">
+            <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center  overflow-y-auto h-80 scrollbar-hide scroll-smooth bg-white/30 rounded-xl p-8 max-sm:min-h-[50vh]">
                   <div className="overflow-x-auto scrollbar-hide"> 
                     <table className="my-3 min-w-full bg-white">
                       <thead className="bg-pennBlue text-white"> 

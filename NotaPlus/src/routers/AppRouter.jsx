@@ -13,6 +13,7 @@ import Subject from "../page/Subject";
 import Activities from "../page/Activities";
 import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
 import RegainAccess from "../page/regainaccess";
+import Test from "../page/Test";
 
 
 
@@ -41,6 +42,7 @@ function AppRouter() {
           <Route path="/teacher/:userId/activities" element={<Activities />} />
           <Route path="/teacher/:userId/messages" element={<Mensajes />} />
           <Route path="/teacher/:userId/tests" element="" />{/* falta hacer */}
+            <Route path="/test" element={<Test/>}/>
             
         {/* Ruta dinámica profile y edit profile*/}  
           <Route path="/profile/:userId" element={<Perfil />} />
@@ -50,6 +52,7 @@ function AppRouter() {
 
           <Route path="/messages/:userId" element={<Mensajes />} />
           <Route path="/regainaccess" element={<RegainAccess/>}/> 
+        
           
           
           
