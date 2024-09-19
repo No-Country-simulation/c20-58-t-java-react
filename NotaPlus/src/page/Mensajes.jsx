@@ -29,7 +29,7 @@ const Mensajes = () => {
 
   const onSubmit = handleSubmit((data) => {
     console.log(data);
-    alert("Gracias, su mensaje fue enviado con éxito");
+    alert("Gracias, su mensaje fue enviado");
     reset();
   });
 
@@ -48,30 +48,11 @@ const Mensajes = () => {
               <Titulos title="ENVIAR MENSAJE O CONSULTA" />
 
 
-
-              <Label para="subject" title="Asunto:" />
-              <input
-                className="w-full p-2 "
-                type="text"
-                placeholder="Escriba Asunto"
-                {...register("subject", {
-                  required: {
-                    value: true,
-                    message: "Debe contener un Asunto",
-                  },
-                })}
-              />
-              {errors.subject && (
-                <span className="block mb-4 font-bold text-s text-red-600">
-                  {errors.subject.message}
-                </span>
-              )}
-
-              <Label para="receiver" title="Destinatario:" />
+              <Label para="receiver" title="¿Con quién deseas hablar?" />
               <select
                 name="receiver"
                 id="receiver"
-                className="w-full p-2"
+                className="w-full p-2  rounded-xl"
                 {...register("receiver", {
                   required: {
                     value: true,
@@ -87,14 +68,32 @@ const Mensajes = () => {
                 <option value="profe3">Profesor 3</option>
               </select>
               {errors.receiver && (
-                <span className="block mb-4 font-bold text-s text-red-600">
+                <span className="block mb-4 font-bold text-s text-mexicanPink_logo">
                   {errors.receiver.message}
                 </span>
               )}
 
-              <Label para="message" title="Mensage:" />
+              <Label para="subject" title="Asunto" />
+              <input
+                className="w-full p-2  rounded-xl"
+                type="text"
+                placeholder="Escriba Asunto"
+                {...register("subject", {
+                  required: {
+                    value: true,
+                    message: "Debe contener un Asunto",
+                  },
+                })}
+              />
+              {errors.subject && (
+                <span className="block mb-4 font-bold text-s text-mexicanPink_logo">
+                  {errors.subject.message}
+                </span>
+              )}  
+
+              <Label para="message" title="Mensaje" />
               <textarea
-                className="w-full p-2"
+                className="w-full p-2  rounded-xl"
                 name="message"
                 id="nessage"
                 cols="30"
@@ -115,7 +114,7 @@ const Mensajes = () => {
                 })}
               ></textarea>
               {errors.message && (
-                <span className="block mb-4 font-bold text-s text-red-600">
+                <span className="block mb-4 font-bold text-s text-mexicanPink_logo">
                   {errors.message.message}
                 </span>
               )}

@@ -1,189 +1,126 @@
-import FooterNavBar from "../components/FooterNavBar";
 import { Header } from "../components/Header";
-import Titulos from "../components/Titulos";
-import iconMail from "../asset/icon_mail.svg";
-import iconUser from "../asset/userimage.png";
 import NombreUsuario from "../components/NombreUsuario";
-import { useSelector } from "react-redux";
-import users from "../json/users.json";
+import Titulos from "../components/Titulos";
+import iconUser from "../asset/userimage.png" ;
 import { useParams } from "react-router-dom";
+import users from "../json/users.json"
+import FooterNavBar from "../components/FooterNavBar";
+import Button1 from "../components/Button1";
 
-function Activities() {
+function NewActivity() {
   const { userId } = useParams();
-  const teacher = users.users.find((user) => user.id === parseInt(userId));
+  const teacher= users.users.find(user=>user.id===parseInt(userId))
   if (!teacher) {
-    return (
-      <div className="flex place-content-center">
-        {" "}
-        <h2 className="text-white">Perfil no encontrado</h2>
-      </div>
-    );
+      return <div className="flex place-content-center"> <h2 className="text-white">Perfil no encontrado</h2></div>;
   }
 
-  const stateTable = useSelector((state) => state.students.students);
-  console.log(stateTable);
 
   return (
     <>
       <Header />
       <section className="flex flex-col place-content-center items-center">
-        <NombreUsuario
-          img={iconUser}
-          alt="Foto de Usuario"
-          nombre={teacher.name}
-          apellido={teacher.lastname}
-          role={teacher.role}
-        />
-        <Titulos title="Tabla de Evaluaciones" />
+        <NombreUsuario img={iconUser} alt="Foto de Usuario" saludo="Hola " nombre={teacher.name} apellido={teacher.lastname} role={teacher.role} />
+            <Titulos
+                title="Actividades"/>
 
-        {/* <NombreUsuarioSubject
-          img={subjectImage}
-          alt="SubjectUser"
-
-          name="Materia 1"
-          text="Grupo 1"
-        /> <hr className="pt-2 w-[70%]" />*/}
-
-        {/* <section className="flex justify-between mt-[1rem]">
-          <p>ICON 3</p>
-          <div className="flex">
-            <h2 className="uppercase text-[#64B2FA] text-[1.2rem] pr-[1rem] font-bold relative bottom-[.2rem]">
-              Estudiantes
-            </h2>
-            <p className="pr-2">ICON1</p>
-            <p className="pr-[.3rem]">ICON2</p>
-          </div>
-        </section> */}
-        <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth bg-gradient-to-br from-blue-500 to-pink-500 rounded-xl bg-backdrop-blur-sm p-8 max-sm:min-h-[50vh]">
-          <div className="grid grid-flow-col-dense m-[4px] w-full">
-            <table className="text-center  text-white">
-              <thead className="bg-white">
-                <tr>
-                  <th className="text-[.9rem] text-white bg-[#85C226] border-2 border-[#85C226]">
-                    Estudiante
-                  </th>
-                  <th className="text-[.7rem] text-[#E11282] border-2 border-[#85C226]">
-                    Nota 1
-                  </th>
-                  <th className="text-[.7rem] text-[#E11282] border-2 border-[#85C226]">
-                    Nota 2
-                  </th>
-                  <th className="text-[.7rem] text-[#E11282] border-2 border-[#85C226]">
-                    Nota 3
-                  </th>
-                  <th className="text-[.7rem] text-[#E11282] border-2 border-[#85C226]">
-                    Nota 4
-                  </th>
-                  <th className="text-[.9rem] p-[1rem] text-[#E11282] border-2 border-[#85C226]">
-                    %
-                  </th>
-                  <th className="text-[#E11282] border-2 border-[#85C226] w-[24px]">
-                    <div>
-                      <img className="h-[24px]" src={iconMail} alt="feedback" />
-                    </div>
-                  </th>
-                </tr>
+          <div className="flex justify-center max-w-3xl gap-[15px] flex-wrap p-4 items-center overflow-y-auto h-80 scrollbar-hide scroll-smooth bg-white/30 rounded-xl">
+            <form className="grid" >
+              <thead className="grid-cols-1 border-b col-span-2 bg-pennBlue text-white border border-gray-300 px-4 ">
+                <th className="grid align-start text-[1.3rem] font-secondary">
+                  Crear
+                </th>
               </thead>
+              <tr className=" border border-gray-300 px-4 py-2  bg-cyan-400">
+                <td className="text-blue-800 font-secondary text-[1.2rem]">Título</td>
+              </tr>
+              <tr className="border-b border border-gray-300 ">
+                <td className=" px-4 py-2 ">
+                  <input
+                    type="text"
+                    className="bg-transparent outline-none text-white placeholder:text-[1rem]"
+                    placeholder="Título de la actividad"
+                  />
+                </td>
+              </tr>
+              <tr className=" border border-gray-300 px-4 py-2  bg-cyan-400">
+                <td className="text-blue-800 font-secondary text-[1.2rem]">Descripción</td>
+              </tr>
+              <tr className="border-b border border-gray-300 ">
+                <td className=" px-4 py-2 ">
+                  <input
+                    type="text"
+                    className="bg-transparent text-white pb-8 placeholder:text-[1rem] outline-none"
+                    placeholder="Describa la actividad"
+                  />
+                </td>
+              </tr>
+              <tr className=" border border-gray-300 px-4 py-2  bg-cyan-400">
+                <td className="text-blue-800 font-secondary text-[1.2rem]">Fecha de Entrega</td>
+              </tr>
+              <tr className="border-b border border-gray-300 ">
+                <td className="">
+                  <input
+                    type="date"
+                    className="bg-transparent text-white placeholder:text-[.8rem] outline-none relative top-[.3rem] left-[.9rem] text-[1.4rem]"
+                  />
+                </td>
+              </tr>
+              <tr className=" border border-gray-300 px-4 py-2  bg-cyan-400">
+                <td className="text-blue-800 font-secondary text-[1.2rem]">Materia</td>
+              </tr>
+              <tr className="border-b border border-gray-300 ">
+                  <select name="" id="" className="bg-gray-400 w-full py-3 outline:none text-md">
+                    <option value="" hidden defaultValue>
+                      Seleccionar Materia
+                    </option>
+                    <option value="mat1">Inglés I</option>
+                    <option value="mat2">Inglés II</option>
+                    <option value="mat3">Lengua I</option>
+                    <option value="mat4">Lengua II</option>
+                  </select>
+                
+              </tr>
+              <tr className=" border border-gray-300 px-4 py-2  bg-cyan-400">
+                <td className="text-blue-800 font-secondary text-[1.2rem]">Tipo de Actividad</td>
+              </tr>
+              <tr className="border-b border border-gray-300 ">
+              <select name="" id="" className="bg-gray-400 w-full py-3 outline:none text-md">
+                    <option value="" hidden defaultValue>
+                      Seleccionar Actividad
+                    </option>
+                    <option value="profe1">Parcial</option>
+                    <option value="profe2">Final</option>
+                    <option value="profe3">Ensayo</option>
+                    <option value="profe3">Éxamen oral</option>
+                    <option value="profe3">Actividad Práctica</option>
+                    <option value="profe3">Salida Programada</option>
+                    <option value="profe3">Otro</option>
 
-              <tbody className="bg-white text-black">
-                {stateTable.map(
-                  ({
-                    id,
-                    name,
-                    noteOne,
-                    noteTwo,
-                    noteThree,
-                    noteFour,
-                    stateStudent,
-                  }) => {
-                    return (
-                      <tr className="border-b border-gray-300" key={id}>
-                        <td className="grid">
-                          <span className="text-[.7rem]">{name}</span>
-                          <span
-                            className={
-                              stateStudent == "Aprobado"
-                                ? "my-2 bg-green-200 text-green-800 rounded text-[.7rem]"
-                                : "my-2 bg-red-200 text-red-800 rounded text-[.7rem]"
-                            }
-                          >
-                            {stateStudent}
-                          </span>
-                        </td>
-                        <td className="border-2 border-blue-500">
-                          <input
-                            type="number"
-                            name=""
-                            id=""
-                            className="w-[2rem] appearance-none h-[2.5rem]"
-                            value={noteOne}
-                          />
-                        </td>
-                        <td className="border-2 border-blue-500">
-                          <input
-                            type="number"
-                            name=""
-                            id=""
-                            className="w-[2rem] appearance-none h-[2.5rem]"
-                            value={noteTwo}
-                          />
-                        </td>
-                        <td className="border-2 border-blue-500">
-                          <input
-                            type="number"
-                            name=""
-                            id=""
-                            className="w-[2rem] appearance-none h-[2.5rem]"
-                            value={noteThree}
-                          />
-                        </td>
-                        <td className="border-2 border-blue-500">
-                          <input
-                            type="number"
-                            name=""
-                            id=""
-                            className="w-[2rem] appearance-none h-[2.5rem]"
-                            value={noteFour}
-                          />
-                        </td>
-                        <td className="border-2 border-blue-500">
-                          <input
-                            type="number"
-                            name=""
-                            id=""
-                            className="w-[2rem] appearance-none h-[2.5rem]"
-                          />
-                        </td>
-                        <td className="border-2 border-blue-500">
-                          <button className="">
-                            <img
-                              className="h-[24px]"
-                              src={iconMail}
-                              alt="feedback"
-                            />
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  }
-                )}
-              </tbody>
-            </table>
+                  </select>
+              </tr>
+              <tr className=" border border-gray-300 px-4 py-2  bg-cyan-400">
+                <td className="text-blue-900 font-secondary text-[1.2rem]">Grupos a Aplicar</td>
+              </tr>
+              <tr className="border-b border border-gray-300 ">
+              <select name="" id="" className="bg-gray-400 w-full py-3 outline:none text-md">
+                    <option value="" hidden defaultValue>
+                      Escoge al Grupo
+                    </option>
+                    <option value="grupo1">Grupo 1</option>
+                    <option value="grupo2">Grupo 2</option>
+                    
+                  </select>
+              </tr>
+            </form>
+            <div className="flex justify-end mt-4 w-full">
+                <button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
+                  Guardar
+                </button>
+              </div>
           </div>
-
-          <div className="flex justify-end mt-4 w-full">
-            <button className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
-              Guardar
-            </button>
-            <button className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded mx-2 mb-2">
-              Subir
-            </button>
-          </div>
-        </div>
       </section>
-      <FooterNavBar userId={teacher.id} role={teacher.role} />
+      <FooterNavBar  userId={teacher.id} role={teacher.role}/>
     </>
   );
 }
-
-export default Activities;
+export default NewActivity;

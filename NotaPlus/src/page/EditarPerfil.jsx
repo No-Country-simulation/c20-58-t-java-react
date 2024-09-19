@@ -48,7 +48,7 @@ const EditarPerfil = () => {
 
             <Label para="email" title="E-mail:" />
             <input
-              className="w-full p-2 mb-1 rounded-md"
+              className="w-full p-2 mb-1 rounded-xl"
               type="email"
               placeholder="Email..."
               {...register("email", {
@@ -61,14 +61,14 @@ const EditarPerfil = () => {
               })}
             />
             {errors.email && (
-              <span className="block mb-4 text-xs text-red-600">
+              <span className="block mb-4 text-xs text-mexicanPink_logo">
                 {errors.email.message}
               </span>
             )}
 
             <Label para="password" title="Nueva Contraseña: " />
             <input
-              className="w-full p-2 mt-1 mb-1 rounded-md"
+              className="w-full p-2 mt-1 mb-1 rounded-xl"
               type="password"
               placeholder="Escriba Nueva Contraseña..."
               {...register("password", {
@@ -80,14 +80,14 @@ const EditarPerfil = () => {
               })}
             />
             {errors.password && (
-              <span className="block mb-4 text-xs text-red-600">
+              <span className="block mb-4 text-xs text-mexicanPink_logo">
                 {errors.password.message}
               </span>
             )}
 
             <Label para="confirmPassword" title="Confirmar Contraseña: " />
             <input
-              className="w-full p-2 mt-1mb-1"
+              className="w-full p-2 mt-1 mb-1 rounded-xl"
               type="password"
               placeholder="Confirmar Nueva Contraseña..."
               {...register("confirmPassword", {
@@ -96,7 +96,7 @@ const EditarPerfil = () => {
               })}
             />
             {errors.confirmPassword && (
-              <span className="block mb-4 text-xs text-red-600">
+              <span className="block mb-4 text-xs text-mexicanPink_logo">
                 {errors.confirmPassword.message}
               </span>
             )}
