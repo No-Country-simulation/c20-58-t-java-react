@@ -61,7 +61,7 @@ const RegainAccess = () => {
                     />
 
                     {errors.email && (
-                    <span className="block mb-4 text-s font-bold text-red-600">
+                    <span className="block mb-4 text-s font-bold text-mexicanPink_logo">
                         {errors.email.message}
                     </span>
                     )}

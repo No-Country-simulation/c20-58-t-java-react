@@ -45,7 +45,7 @@ const initialState = {
       noteTwo: 1,
       noteThree: 3,
       noteFour: 2.5,
-      stateStudent: "desaprobado",
+      stateStudent: "Desaprobado",
     },
     {
       id: "7",
@@ -54,7 +54,7 @@ const initialState = {
       noteTwo: 2,
       noteThree: 2.5,
       noteFour: 3,
-      stateStudent: "desaprobado",
+      stateStudent: "Desaprobado",
     },
     {
       id: "8",

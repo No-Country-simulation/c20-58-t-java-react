@@ -1,150 +1,143 @@
-{"users": [
-
+{
+  "users": [
     {
-
-        "id":23789456, 
-        "password":"Pa23789456",
-        "role":"Padre/Madre",
-        "name":"Jane", 
-        "lastname":"Doe",
-        "email":"?????@gmail.com",
-        "address":"calle falsa 123",
-        "contact": 123456789,
-        "students":[
-          {"id": 34675123,
-            "name":"John",
-            "lastname":"Doe"
-          },
-          {"id": 32555124,
-            "name":"Emily",
-            "lastname":"Doe"
-          }
-        ]
+      "id": 23789456,
+      "password": "Pa23789456",
+      "role": "Padre/Madre",
+      "name": "Jane",
+      "lastname": "Doe",
+      "email": "?????@gmail.com",
+      "address": "calle falsa 123",
+      "contact": 123456789,
+      "students": [
+        { "id": 34675123, "name": "John", "lastname": "Doe" },
+        { "id": 32555124, "name": "Emily", "lastname": "Doe" }
+      ]
     },
     {
-        "id":34675123, 
-        "password":"Es34675123",
-        "role":"Estudiante", 
-        "name":"John", 
-        "lastname":"Doe",
-        "email":"?????@gmail.com",
-        "address":"calle falsa 123",
-        "contact": 123456789,
-        "subjects":[
+      "id": 34675123,
+      "password": "Es34675123",
+      "role": "Estudiante",
+      "name": "John",
+      "lastname": "Doe",
+      "email": "?????@gmail.com",
+      "address": "calle falsa 123",
+      "contact": 123456789,
+      "subjects": [
+        {
+          "id": 1,
+          "name": "Matemática II",
+          "course": "2do año",
+          "tests": [
             {
-              "id": 1,
-              "name": "Matemática II",
-              "course": "2do año",
-              "tests": [
-                {
-                  "id": 101,
-                  "fecha": "2024-08-20",
-                  "tipo": "Parcial",
-                  "nota": 8,
-                  "feedback": "Buen trabajo, sigue mejorando"
-                },
-                {
-                  "id": 102,
-                  "fecha": "2024-09-01",
-                  "tipo": "Final",
-                  "nota": 9,
-                  "feedback": "Excelente desempeño"
-                }
-              ]
+              "id": 101,
+              "fecha": "2024-08-20",
+              "tipo": "Parcial",
+              "nota": 8,
+              "feedback": "Buen trabajo, sigue mejorando"
             },
             {
-              "id": 2,
-              "name": "Química I",
-              "course": "2do año",
-              "tests": [
-                {
-                  "id": 201,
-                  "fecha": "2024-08-20",
-                  "tipo": "Parcial",
-                  "nota": 4,
-                  "feedback": "Vamos, puedes mejorar"
-                },
-                {
-                  "id": 202,
-                  "fecha": "2024-09-01",
-                  "tipo": "Final",
-                  "nota": 6,
-                  "feedback": "Mejor. Te felicito,  sé que puedes esforzarte más"
-                }
-              ]
-            },
-            {
-              "id": 3,
-              "name": "Inglés I",
-              "course": "2do año",
-              "tests": [
-                {
-                  "id": 301,
-                  "fecha": "2024-08-15",
-                  "tipo": "Prueba corta",
-                  "nota": 7,
-                  "feedback": "Buen progreso, pero revisa el tema 3"
-                }
-              ]
-            },
-            {
-              "id": 4,
-              "name": "Geografía II",
-              "course": "2do año",
-              "tests": [
-                {
-                  "id": 401,
-                  "fecha": "2024-08-20",
-                  "tipo": "Parcial",
-                  "nota": 8,
-                  "feedback": "Buen trabajo"
-                },
-                {
-                  "id": 402,
-                  "fecha": "2024-09-01",
-                  "tipo": "Final",
-                  "nota": 9,
-                  "feedback": "Excelente desempeño"
-                }
-              ]
+              "id": 102,
+              "fecha": "2024-09-01",
+              "tipo": "Final",
+              "nota": 9,
+              "feedback": "Excelente desempeño"
             }
           ]
+        },
+        {
+          "id": 2,
+          "name": "Química I",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 201,
+              "fecha": "2024-08-20",
+              "tipo": "Parcial",
+              "nota": 4,
+              "feedback": "Vamos, puedes mejorar"
+            },
+            {
+              "id": 202,
+              "fecha": "2024-09-01",
+              "tipo": "Final",
+              "nota": 6,
+              "feedback": "Mejor. Te felicito,  sé que puedes esforzarte más"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Inglés I",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 301,
+              "fecha": "2024-08-15",
+              "tipo": "Prueba corta",
+              "nota": 7,
+              "feedback": "Buen progreso, pero revisa el tema 3"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Geografía II",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 401,
+              "fecha": "2024-08-20",
+              "tipo": "Parcial",
+              "nota": 8,
+              "feedback": "Buen trabajo"
+            },
+            {
+              "id": 402,
+              "fecha": "2024-09-01",
+              "tipo": "Final",
+              "nota": 9,
+              "feedback": "Excelente desempeño"
+            }
+          ]
+        }
+      ]
     },
     {
-        "id":5341078, 
-        "password":"Te5341078",
-        "role":"Profesor/a", 
-        "name":"Sophia", 
-        "lastname":"Rose",
-        "email":"?????@gmail.com",
-        "address":"calle falsa 125",
-        "contact": 123456789,
-        "subjects":[
-          {
-            "id": 1,
-              "name": "Inglés I",
-              "course": "1er año",
-              "tests": []
-          },
-          {
-            "id": 2,
-              "name": "Inglés II",
-              "course": "2do año",
-              "tests": []
-          },
-          {
-            "id": 3,
-              "name": "Lengua I",
-              "course": "1er año",
-              "tests": []
-          },
-          {
-            "id": 4,
-              "name": "Lengua II",
-              "course": "2do año",
-              "tests": []
-          }
-        ]
+      "id": 5341078,
+      "password": "Te5341078",
+      "role": "Profesor/a",
+      "name": "Sophia",
+      "lastname": "Rose",
+      "email": "?????@gmail.com",
+      "address": "calle falsa 125",
+      "contact": 123456789,
+      "subjects": [
+        {
+          "id": 1,
+          "name": "Inglés I",
+          "course": "1er año",
+          "tests": []
+        },
+        {
+          "id": 2,
+          "name": "Inglés II",
+          "course": "2do año",
+          "tests": []
+        },
+        {
+          "id": 3,
+          "name": "Lengua I",
+          "course": "1er año",
+          "tests": []
+        },
+        {
+          "id": 4,
+          "name": "Lengua II",
+          "course": "2do año",
+          "tests": []
+        }
+      ]
     },
     {
       "id": 32555124,
@@ -152,87 +145,87 @@
       "role": "Estudiante",
       "name": "Emily",
       "lastname": "Doe",
-      "email":"?????@gmail.com",
-      "address":"calle falsa 123",
+      "email": "?????@gmail.com",
+      "address": "calle falsa 123",
       "contact": 123456789,
       "subjects": [
-          {
-              "id": 1,
-              "name": "Matemática II",
-              "course": "2do año",
-              "tests": [
-                  {
-                      "id": 501,
-                      "fecha": "2024-09-15",
-                      "tipo": "Parcial",
-                      "nota": 8.5,
-                      "feedback": "Muy bien, sigue así"
-                  }
-              ]
-          },
-          {
-              "id": 2,
-              "name": "Química I",
-              "course": "2do año",
-              "tests": [
-                  {
-                    "id": 501,
-                    "fecha": "2024-08-20",
-                    "tipo": "Ensayo",
-                    "nota": 8,
-                    "feedback": "Buen análisis, pero cuida la ortografía"
-                  },
-                  {
-                      "id": 502,
-                      "fecha": "2024-10-05",
-                      "tipo": "Examen final",
-                      "nota": 9,
-                      "feedback": "Excelente trabajo, ¡felicitaciones!"
-                  }
-              ]
-          },
-          {
-              "id": 3,
-              "name": "Inglés I",
-              "course": "2do año",
-              "tests": [
-                  {
-                      "id": 503,
-                      "fecha": "2024-11-10",
-                      "tipo": "Presentación",
-                      "nota": 7.5,
-                      "feedback": "Buena pronunciación, pero profundiza más en el tema"
-                  },
-                  {
-                    "id": 504,
-                    "fecha": "2024-12-05",
-                    "tipo": "Examen final",
-                    "nota": 9,
-                    "feedback": "Excelente trabajo, ¡felicitaciones!"
-                }
-              ]
-          },
-          {
-            "id": 4,
-            "name": "Geografía II",
-            "course": "2do año",
-            "tests": [
-              {
-                "id": 601,
-                "fecha": "2024-08-20",
-                "tipo": "Parcial",
-                "nota": 8,
-                "feedback": "Buen trabajo"
-              },
-              {
-                "id": 602,
-                "fecha": "2024-09-01",
-                "tipo": "Final",
-                "nota": 9,
-                "feedback": "Excelente desempeño"
-              }
-            ]
-          }
+        {
+          "id": 1,
+          "name": "Matemática II",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 501,
+              "fecha": "2024-09-15",
+              "tipo": "Parcial",
+              "nota": 8.5,
+              "feedback": "Muy bien, sigue así"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Química I",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 501,
+              "fecha": "2024-08-20",
+              "tipo": "Ensayo",
+              "nota": 8,
+              "feedback": "Buen análisis, pero cuida la ortografía"
+            },
+            {
+              "id": 502,
+              "fecha": "2024-10-05",
+              "tipo": "Examen final",
+              "nota": 9,
+              "feedback": "Excelente trabajo, ¡felicitaciones!"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Inglés I",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 503,
+              "fecha": "2024-11-10",
+              "tipo": "Presentación",
+              "nota": 7.5,
+              "feedback": "Buena pronunciación, pero profundiza más en el tema"
+            },
+            {
+              "id": 504,
+              "fecha": "2024-12-05",
+              "tipo": "Examen final",
+              "nota": 9,
+              "feedback": "Excelente trabajo, ¡felicitaciones!"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Geografía II",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 601,
+              "fecha": "2024-08-20",
+              "tipo": "Parcial",
+              "nota": 8,
+              "feedback": "Buen trabajo"
+            },
+            {
+              "id": 602,
+              "fecha": "2024-09-01",
+              "tipo": "Final",
+              "nota": 9,
+              "feedback": "Excelente desempeño"
+            }
+          ]
+        }
       ]
     },
     {
@@ -241,69 +234,67 @@
       "role": "Estudiante",
       "name": "David",
       "lastname": "Lee",
-      "email":"?????@gmail.com",
-      "address":"calle falsa 127",
+      "email": "?????@gmail.com",
+      "address": "calle falsa 127",
       "contact": 123456789,
       "subjects": [
-          {
-              "id": 4,
-              "name": "Matemática II",
-              "course": "2do año",
-              "tests": [
-                  {
-                      "id": 601,
-                      "fecha": "2024-08-25",
-                      "tipo": "Práctica",
-                      "nota": 6.5,
-                      "feedback": "Necesitas repasar los conceptos básicos"
-                  },
-                  {
-                      "id": 602,
-                      "fecha": "2024-09-20",
-                      "tipo": "Examen parcial",
-                      "nota": 7,
-                      "feedback": "Buen progreso, sigue así"
-                  }
-              ]
-          },
-          {
-              "id": 5,
-              "name": "Química I",
-              "course": "2do año",
-              "tests": [
-                  {
-                      "id": 603,
-                      "fecha": "2024-10-15",
-                      "tipo": "Proyecto",
-                      "nota": 8,
-                      "feedback": "Excelente trabajo en equipo"
-                  }
-              ]
-          },
-          {
-            "id": 6,
-            "name": "Inglés I",
-            "course": "2do año",
-            "tests": [
-                {
-                    "id": 701,
-                    "fecha": "2024-09-05",
-                    "tipo": "Examen teórico",
-                    "nota": 9.5,
-                    "feedback": "Excelente dominio de los conceptos"
-                },
-                {
-                  "id": 706,
-                  "fecha": "2024-11-20",
-                  "tipo": "Final",
-                  "nota": 9.5,
-                  "feedback": "Felicitaciones, has logrado un desempeño sobresaliente."
-                }
-              
-              ]
-          }
-      ]    
+        {
+          "id": 4,
+          "name": "Matemática II",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 601,
+              "fecha": "2024-08-25",
+              "tipo": "Práctica",
+              "nota": 6.5,
+              "feedback": "Necesitas repasar los conceptos básicos"
+            },
+            {
+              "id": 602,
+              "fecha": "2024-09-20",
+              "tipo": "Examen parcial",
+              "nota": 7,
+              "feedback": "Buen progreso, sigue así"
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "Química I",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 603,
+              "fecha": "2024-10-15",
+              "tipo": "Proyecto",
+              "nota": 8,
+              "feedback": "Excelente trabajo en equipo"
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Inglés I",
+          "course": "2do año",
+          "tests": [
+            {
+              "id": 701,
+              "fecha": "2024-09-05",
+              "tipo": "Examen teórico",
+              "nota": 9.5,
+              "feedback": "Excelente dominio de los conceptos"
+            },
+            {
+              "id": 706,
+              "fecha": "2024-11-20",
+              "tipo": "Final",
+              "nota": 9.5,
+              "feedback": "Felicitaciones, has logrado un desempeño sobresaliente."
+            }
+          ]
+        }
+      ]
     }
-]}
-
-
+  ]
+}

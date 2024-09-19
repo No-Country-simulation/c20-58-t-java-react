@@ -10,9 +10,10 @@ import Mensajes from "../page/Mensajes";
 import Perfil from "../page/Perfil";
 import EditarPerfil from "../page/EditarPerfil";
 import Subject from "../page/Subject";
-import Activities from "../page/Activities";
+import Tests from "../page/Tests";
 import PoliticaPrivacidad from "../page/PoliticaPrivacidad";
 import RegainAccess from "../page/regainaccess";
+import NewActivity from "../page/Activities";
 
 
 
@@ -38,9 +39,10 @@ function AppRouter() {
           <Route path="/teacher/:userId" element={<Teacher />}/>
           <Route path="/teacher/:userId/subjects" element={<Subject />} />
           <Route path="/teacher/:userId/subjects/:subjectId" element={<SubjectInfo/>} />
-          <Route path="/teacher/:userId/activities" element={<Activities />} />
+          <Route path="/teacher/:userId/activities" element={<NewActivity />} />
           <Route path="/teacher/:userId/messages" element={<Mensajes />} />
-          <Route path="/teacher/:userId/tests" element="" />{/* falta hacer */}
+          <Route path="/teacher/:userId/tests" element={<Tests/>} />
+          
             
         {/* Ruta dinámica profile y edit profile*/}  
           <Route path="/profile/:userId" element={<Perfil />} />
@@ -50,6 +52,7 @@ function AppRouter() {
 
           <Route path="/messages/:userId" element={<Mensajes />} />
           <Route path="/regainaccess" element={<RegainAccess/>}/> 
+        
           
           
           
