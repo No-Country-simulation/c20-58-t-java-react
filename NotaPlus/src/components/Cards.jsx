@@ -12,7 +12,7 @@ export const Cards = (params) => {
   };
 
   return (
-    <div onClick={handleClick} className="flex flex-col w-[150px] bg-white rounded-lg items-center p-2 border border-green-700 shadow-lg shadow-black">
+    <div onClick={handleClick} className="flex flex-col w-[160px] bg-white rounded-lg items-center p-2 border border-green-700 shadow-lg shadow-black">
         <div><img className="h-[72px]" src={img} alt={alt} /></div>
         <h3 className="text-azulClaroBase text-[18px] text-wrap text-center ease-in-out duration-500 hover:uppercase font-bold" >{title}</h3>
     </div>
@@ -31,7 +31,7 @@ export const CardSubject = (params) => {
 
   return (
     
-    <div  onClick={handleClick} className="flex flex-col w-[145px] h-[145px) bg-white rounded-lg items-center p-3 border border-solid border-yellowGreen shadow-lg shadow-black" >
+    <div  onClick={handleClick} className="flex flex-col w-[170px] h-[160px) bg-white rounded-lg items-center p-3 border border-solid border-yellowGreen shadow-lg shadow-black" >
         <div><img className="h-[72px] w-[130px]" src={img} alt={alt} /></div>
         
           <h3 className="text-azulClaroBase font-bold text-wrap text-center ease-in-out duration-500 hover:uppercase" >{title}</h3>
@@ -54,7 +54,7 @@ export const CardStudent = (params) => {
 
 return (
   
-  <div  onClick={handleClick} className="flex flex-col w-[145px] h-[145px) bg-white rounded-lg items-center p-3 border border-solid border-yellowGreen shadow-lg shadow-black" >
+  <div  onClick={handleClick} className="flex flex-col w-[160px] h-[160px) bg-white rounded-lg items-center p-5 border border-solid border-yellowGreen shadow-lg shadow-black" >
       <div><img className="h-[72px] w-[130px]" src={img} alt={alt} /></div>
       
         <h3 className="text-azulClaroBase text-[20px] font-bold text-wrap text-center ease-in-out duration-500 hover:uppercase" >{title}</h3>

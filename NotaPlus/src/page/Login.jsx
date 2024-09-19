@@ -27,7 +27,7 @@ function Login() {
     setShowPassword(!showPassword); 
   };
 
-console.log(errors);
+
   const [authError, setAuthError] = useState('');
   const navigate =useNavigate();
 
@@ -37,7 +37,7 @@ const users = [
   {userId:'23789456', password:'Pa23789456',role:'parents', name:'Jane', lastname:'Doe'},
   {userId:'34675123', password:'Es34675123',role:'student', name:'John', lastname:'Doe'},
   {userId:'5341078', password:'Te5341078',role:'teacher', name:'Sophia', lastname:'Rose'},
-  {userId:'32555124', password:'Es32555124',role:'student', name:'Emily', lastname:'SDoe'},
+  {userId:'32555124', password:'Es32555124',role:'student', name:'Emily', lastname:'Doe'},
   {userId:'33225146', password:'Es33225146',role:'student', name:'David', lastname:'Lee'},
 ]
 
@@ -72,18 +72,19 @@ const users = [
   });
 
   return (
-    <section className="flex flex-col content-center  place-content-center min-h-[100vh]">
+    <section className="flex flex-col content-center place-content-center min-h-[90vh]">
       <div className="flex flex-col max-w-50 md:self-center border-blue-400 border-2 p-[2rem] rounded-md bg-[#0d0f3f] ">
         <img
           src={logo}
           alt="logoNotaPlus"
           className="flex self-center w-[50%] relative sm:bottom-[3rem] md:bottom-[0rem]"
         />
-        <form onSubmit={onSubmit} className="flex flex-col">
+        <form onSubmit={onSubmit} className="flex flex-col ">
           <label htmlFor="userId" className="text-white ">
             ID
           </label>
-          <input
+          <input 
+            id="userId"
             type="text"
             className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
             autoFocus
@@ -95,7 +96,7 @@ const users = [
             })}
           />
           {errors.userId && (
-            <span className="block mb-4 font-bold text-s text-red-600">
+            <span className="block mb-4 font-bold text-s text-mexicanPink_logo">
               {errors.userId.message}
             </span>
           )}
@@ -116,6 +117,7 @@ const users = [
               </i>
             </span>
             <input
+              id="password"
               type={showPassword ? "text" : "password"} 
               className="max-sm:bg-transparent max-sm:border-white max-sm:border-b-2 p-[.5rem] max-sm:text-white max-sm:outline-none md:text-[1.5rem] md:rounded-[.5rem]"
               {...register("password", {
@@ -132,7 +134,7 @@ const users = [
               
             />
             {errors.password && (
-              <span className="block mb-4 font-bold text-s text-red-600">
+              <span className="block mb-4 font-bold text-s text-mexicanPink_logo">
                 {errors.password.message}
               </span>
             )}
@@ -140,18 +142,6 @@ const users = [
             <span onClick={togglePasswordVisibility} className="absolute right-2 top-14 cursor-pointer text-gray-500">
               {showPassword ? <FaEyeSlash /> : <FaEye />} 
             </span>
-
-
-            {/* <span className="flex justify-end items-end">
-                <img
-                    onClick={() => {
-                      console.log("Tilin");
-                    }}
-                    className="max-sm:text-white absolute mb-[1rem] md:pr-[.5rem] cursor-pointer"
-                  >
-                    icono
-                </img>
-            </span> */}
 
           </div>
 
@@ -162,20 +152,12 @@ const users = [
             </Link>{" "}
           </p>
 
-
           <Button1
             typeBtn="submit"
             text="Ingresar"/>
 
-          {/* <button
-            className="flex w-[100%] justify-center p-[1.2rem] bg-[#2C45F8] 
-          rounded-[.7rem] text-white text-[1.4rem] mt-[1.5rem]"
-          >
-            Ingresar
-          </button> */}
-
           {authError &&  (
-              <span className="block mb-4 text-s text-red-600">
+              <span className="block mb-4 text-s text-mexicanPink_logo">
                 {authError}
               </span>
             )}
