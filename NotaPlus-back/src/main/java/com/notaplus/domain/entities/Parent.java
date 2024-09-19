@@ -12,8 +12,8 @@ import java.util.UUID;
 @Getter
 @Setter
 @Entity
-@Table(name = "guardians")
-public class Guardian {
+@Table(name = "parents")
+public class Parent {
     @Id
     private UUID id;
 
@@ -22,7 +22,6 @@ public class Guardian {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
-
 
     @ColumnDefault("0")
     @Column(name = "is_deleted")

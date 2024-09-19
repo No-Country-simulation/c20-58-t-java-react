@@ -13,10 +13,10 @@ import java.util.UUID;
 @Getter
 @Setter
 @Embeddable
-public class GuardianStudentId implements Serializable {
+public class ParentStudentId implements Serializable {
     private static final long serialVersionUID = -6461697017242633498L;
-    @Column(name = "guardian_id", nullable = false)
-    private UUID guardianId;
+    @Column(name = "parent_id", nullable = false)
+    private UUID parentId;
 
     @Column(name = "student_id", nullable = false)
     private UUID studentId;
@@ -25,14 +25,14 @@ public class GuardianStudentId implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        GuardianStudentId entity = (GuardianStudentId) o;
+        ParentStudentId entity = (ParentStudentId) o;
         return Objects.equals(this.studentId, entity.studentId) &&
-                Objects.equals(this.guardianId, entity.guardianId);
+                Objects.equals(this.parentId, entity.parentId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(studentId, guardianId);
+        return Objects.hash(studentId, parentId);
     }
 
 }

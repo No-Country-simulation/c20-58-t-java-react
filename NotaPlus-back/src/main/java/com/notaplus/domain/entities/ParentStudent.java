@@ -9,16 +9,16 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-@Table(name = "guardian_student")
-public class GuardianStudent {
+@Table(name = "parent_student")
+public class ParentStudent {
     @EmbeddedId
-    private GuardianStudentId id;
+    private ParentStudentId id;
 
-    @MapsId("guardianId")
+    @MapsId("parentId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JoinColumn(name = "guardian_id", nullable = false)
-    private Guardian guardian;
+    @JoinColumn(name = "parent_id", nullable = false)
+    private Parent parent;
 
     @MapsId("studentId")
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
