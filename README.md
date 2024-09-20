@@ -20,11 +20,10 @@ Proporcionar una aplicación para el seguimiento del rendimiento académico de e
 
 ### Roles del Equipo
 - **Diseñador de Experiencia de Usuario (UX):** Katherine Hernandéz (Kathe).-
-- **Desarrolladores Frontend:** Anyelith Jacobo, Luciana Quilcate(Luma), Jose Medina, Hugo Estiben.
-- **Desarrolladores Backend:** Miguel Martin, Gini Blanco, Matías Campopiano, Dario Nicolas Ramos.
-- **Project Manager:** Matías Campopiano.
+- **Desarrolladores Frontend:** Luciana Quilcate(Luma), Jose Medina.
+- **Desarrolladores Backend:** Miguel Martin.
 - **QA:** Nicolas Rios.
-- **Team Leader:** Juan Grimaldos.
+- **Team Leader:** Cynthia Sotelo.
  
 
 ## Funcionalidades de la Aplicación:
